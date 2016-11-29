@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Tijdslijn</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="timeline">
+            <li ng-repeat="item in ctrl.timelineItems" class="timeline-item">
+                <a ng-if="item.link.length > 0" href="{{item.link}}" title="Ontdek meer over '{{item.title}}'." class="timeline-link">
+                    <div class="timeline-badge {{item.badge.severity}}">
+                        <i class="glyphicon glyphicon-{{item.badge.type}}"></i>
+                    </div>
+                </a>
+                <div ng-hide="item.link.length > 0"class="timeline-badge {{item.badge.severity}}">
+                    <i class="glyphicon glyphicon-{{item.badge.type}}"></i>
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">{{item.title}}</h4>
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{item.timestamp}}</small></p>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="row" ng-bind-html="item.description"></div>
+                        <a ng-if="item.link.length > 0" href="{{item.link}}" title="Ontdek meer over '{{item.title}}'.">Lees meer...</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

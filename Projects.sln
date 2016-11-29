@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KlasApp", "KlasApp\", "{787574D0-3F34-4A96-B2DA-282A0FB0EFCE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60092"
+		Debug.AspNetCompiler.PhysicalPath = "KlasApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60092\"
+		Debug.AspNetCompiler.Updateable = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60092"
+		Release.AspNetCompiler.PhysicalPath = "KlasApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60092\"
+		Release.AspNetCompiler.Updateable = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60092"
+		SlnRelativePath = "KlasApp\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Toolkit", "Toolkit\", "{1972A61E-B7B7-4D88-9C85-4848D52E40CD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57365"
+		Debug.AspNetCompiler.PhysicalPath = "Toolkit\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57365\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57365"
+		Release.AspNetCompiler.PhysicalPath = "Toolkit\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57365\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57365"
+		SlnRelativePath = "Toolkit\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TrouwSite", "TrouwSite\", "{BA8243CA-FE80-4354-BD02-C447FF5EB7F8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64354"
+		Debug.AspNetCompiler.PhysicalPath = "TrouwSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64354\"
+		Debug.AspNetCompiler.Updateable = "false"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64354"
+		Release.AspNetCompiler.PhysicalPath = "TrouwSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64354\"
+		Release.AspNetCompiler.Updateable = "false"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64354"
+		SlnRelativePath = "TrouwSite\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{787574D0-3F34-4A96-B2DA-282A0FB0EFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787574D0-3F34-4A96-B2DA-282A0FB0EFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1972A61E-B7B7-4D88-9C85-4848D52E40CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1972A61E-B7B7-4D88-9C85-4848D52E40CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8243CA-FE80-4354-BD02-C447FF5EB7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8243CA-FE80-4354-BD02-C447FF5EB7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
