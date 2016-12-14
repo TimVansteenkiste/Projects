@@ -1,1 +1,86 @@
-﻿
+﻿{
+  "flights": [
+    {
+      "id": "to",
+      "title": "Brussels (BRU) - Calgary, Alberta (YYC)",
+      "start": "11/07, 10u35",
+      "end": "11/07, 13u40",
+      "desciption":  "<img class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\" alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/><p class=\"col-lg-10 col-md-9 col-sm-8 col-xs-12\">Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
+    },
+    {
+      "id": "from",
+      "title": "Vancouver, Brit. Columbia (YVR) - Brussels(ZYR)",
+      "start": "30/07, 13u30",
+      "end": "31/07, 11u51",
+      "description": "<img class=\"col-md-4\" alt=\"Air France\" src=\"./content/AirFrance_Logo.png\"/><p class=\"col-md-8\">Aan alles komt een einde, zo ook aan dit avontuur.</p>"
+    }
+  ],
+  "locations": [
+    {
+      "id": "calgary",
+      "title": "Calgary",
+      "start": "11/07",
+      "end": "12/07"
+    },
+    {
+      "id": "kanaskis",
+      "title": "Kanaskis Village",
+      "start": "12/07",
+      "end": "14/07"
+    },
+    {
+      "id": "banff",
+      "title": "Banff National Park",
+      "start": "14/07",
+      "end": "16/07"
+    },
+    {
+      "id": "louise",
+      "title": "Lake Louise",
+      "start": "16/07",
+      "end": "17/07"
+    },
+    {
+      "id": "jasper",
+      "title": "Jasper",
+      "start": "17/07",
+      "end": "19/07"
+    },
+    {
+      "id": "clearwater",
+      "title": "Clearwater",
+      "start": "19/07",
+      "end": "21/07"
+    },
+    {
+      "id": "kamloops",
+      "title": "Kamloops",
+      "start": "21/07",
+      "end": "22/07"
+    },
+    {
+      "id": "harrison",
+      "title": "Harrison Hot Springs",
+      "start": "22/07",
+      "end": "24/07"
+    },
+    {
+      "id": "victoria",
+      "title": "Victoria",
+      "start": "24/07",
+      "end": "25/07"
+    },
+    {
+      "id": "tofino",
+      "title": "Tofino",
+      "start": "25/07",
+      "end": "28/07"
+    },
+    {
+      "id": "vancouver",
+      "title": "Vancouver",
+      "start": "28/07",
+      "end": "30/07"
+    }
+  ]
+}
