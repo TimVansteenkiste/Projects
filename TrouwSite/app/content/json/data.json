@@ -5,7 +5,7 @@
       "title": "Brussels (BRU) - Calgary, Alberta (YYC)",
       "start": "11/07, 10u35",
       "end": "11/07, 13u40",
-      "desciption":  "<img class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\" alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/><p class=\"col-lg-10 col-md-9 col-sm-8 col-xs-12\">Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
+      "description":  "<img class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\" alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/><p class=\"col-lg-10 col-md-9 col-sm-8 col-xs-12\">Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
     },
     {
       "id": "from",
@@ -20,7 +20,15 @@
       "id": "calgary",
       "title": "Calgary",
       "start": "11/07",
-      "end": "12/07"
+      "end": "12/07",
+      "driveDistance": "138km",
+      "hotel": {
+        "name": "Hotel in Calgary",
+        "price": 100.00
+      },
+      "activities": [
+        { "name":  "Rafting", "price": 55.00 }
+      ]
     },
     {
       "id": "kanaskis",

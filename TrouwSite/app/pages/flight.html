@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <div class="col-md-12">
         <div class="page-header">
-            <h1>{{ctrl.title}}</h1>
+            <h1>{{ctrl.flight.title}}</h1>
         </div>
     </div>
 </div>
@@ -10,5 +10,4 @@
         <p><a href back><span class="glyphicon glyphicon-chevron-left"></span>Vorige</a></p>
     </div>
 </div>
-<div class="row">
-</div>
+<div class="row" ng-bind-html="ctrl.flight.description"></div>

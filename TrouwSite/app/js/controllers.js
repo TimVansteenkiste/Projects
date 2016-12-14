@@ -55,16 +55,58 @@ angular.module('TrouwApp.controllers', [])
     .controller('LocationController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
         var ctrl = this;
 
-        ctrl.title = $routeParams['location'];
+        ctrl.location = { title: $routeParams['location'] };
         ctrl.carouselItems = [
             { src: "http://placehold.it/1000x500&text=slide1" },
             { src: "http://placehold.it/1000x500&text=slide2" },
             { src: "http://placehold.it/1000x500&text=slide3" }
         ];
 
+        function berekenStats() {
+            function dateStat(location) {
+                if (angular.isUndefined(location) || angular.isUndefined(location.start) || angular.isUndefined(location.end)) return;
+                return location.start + ' - ' + location.end
+            }
+            function prijsStat(location) {
+                if (angular.isUndefined(location)) return;
+                var prijs = 0.00;
+                if (angular.isDefined(location.hotel))
+                    prijs += location.hotel.price;
+                if (angular.isArray(location.activities)) {
+                    for (var i = 0, activity; activity = location.activities[i]; ++i) {
+                        prijs += activity.price;
+                    }
+                }
+
+                if (prijs <= 0) return;
+                else return prijs.toFixed(2) + '&euro;';
+            }
+            function hotelStat(location) {
+                if (angular.isUndefined(location) || angular.isUndefined(location.hotel)) return;
+                return '<a href="#/location/' + location.id + '/hotel">' + location.hotel.name + '</a>';
+            }
+            function activiteitenStat(location) {
+                if (angular.isUndefined(location) || !angular.isArray(location.activities)) return;
+                return location.activities.length;
+            }
+            function sponserStat(location) {
+                if (angular.isUndefined(location) || angular.isUndefined(location.id)) return;
+                return '<a href="#/sponser?location=' + location.id + '">Sponser!</a>';
+            }
+            ctrl.stats = [
+                { title: "Verblijf duur", key: '<span class="glyphicon glyphicon-calendar"></span>', value: dateStat(ctrl.location) },
+                { title: "Prijskaartje", key: '<span class="glyphicon glyphicon-euro"></span>', value: prijsStat(ctrl.location) },
+                { title: "Hotel", key: '<span class="glyphicon glyphicon-home"></span>', value: hotelStat(ctrl.location) },
+                { title: "Totale Rij afstand", key: '<span class="glyphicon glyphicon-road" ></span>', value: ctrl.location.driveDistance },
+                { title: "Activiteiten", key: '<span class="glyphicon glyphicon-camera"></span>', value: activiteitenStat(ctrl.location) },
+                { title: "Sponser", key: '<span class="glyphicon glyphicon-piggy-bank"></span>', value: sponserStat(ctrl.location) }
+            ];
+        }
+
         dataService.getLocation($routeParams['location'])
                    .then(function (location) {
-                       ctrl.title = location.title;
+                       ctrl.location = location;
+                       berekenStats();
                        ctrl.carouselItems = [];
                    });
         
@@ -74,11 +116,11 @@ angular.module('TrouwApp.controllers', [])
     .controller('FlightController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
         var ctrl = this;
 
-        ctrl.title = $routeParams['flight'];
+        ctrl.flight = { title: $routeParams['flight'] };
 
         dataService.getFlight($routeParams['flight'])
                    .then(function (flight) {
-                       ctrl.title = flight.title;
+                       ctrl.flight = flight;
                    });
 
         return ctrl;

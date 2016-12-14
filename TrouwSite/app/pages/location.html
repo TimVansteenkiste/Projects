@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <div class="col-md-12">
         <div class="page-header">
-            <h1>{{ctrl.title}}</h1>
+            <h1>{{ctrl.location.title}}</h1>
         </div>
     </div>
 </div>
@@ -15,8 +15,7 @@
         <carousel items="ctrl.carouselItems"></carousel>
     </div>
     <div class="col-md-5 col-sm-12">
-        <!-- Stats -->
-        <p>Test</p>
+        <div class="col-lg-6" style="font-size: larger; margin: 0.3em 0" ng-repeat="stat in ctrl.stats track by $index" ng-if="stat.value" title="{{stat.title}}"><span ng-bind-html="stat.key"></span> <span ng-bind-html="stat.value"></span></div> 
     </div>
 </div>
     <!-- Activiteiten -->
