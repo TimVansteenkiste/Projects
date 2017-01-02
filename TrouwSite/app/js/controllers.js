@@ -25,7 +25,7 @@ angular.module('TrouwApp.controllers', [])
                 title: flight.title,
                 timestamp: flight.start + ' - ' + flight.end,
                 description: flight.description,
-                link: '#/flight/' + flight.id
+                link: '#!/flight/' + flight.id
             };
         }
         function locationToTimelineItem(location) {
@@ -34,7 +34,7 @@ angular.module('TrouwApp.controllers', [])
                 title: location.title,
                 timestamp: location.start + ' - ' + location.end,
                 description: location.description,
-                link: '#/location/' + location.id
+                link: '#!/location/' + location.id
             };
         }
         function timelineSort(item1, item2) {
@@ -52,7 +52,7 @@ angular.module('TrouwApp.controllers', [])
 
         return ctrl;
     }])
-    .controller('LocationController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
+    .controller('LocationController', ['$routeParams', 'DataService', '$location', function ($routeParams, dataService, $location) {
         var ctrl = this;
 
         ctrl.location = { title: $routeParams['location'] };
@@ -71,7 +71,7 @@ angular.module('TrouwApp.controllers', [])
                 if (angular.isUndefined(location)) return;
                 var prijs = 0.00;
                 if (angular.isDefined(location.hotel))
-                    prijs += location.hotel.price;
+                    prijs += location.hotel.price * location.hotel.nights;
                 if (angular.isArray(location.activities)) {
                     for (var i = 0, activity; activity = location.activities[i]; ++i) {
                         prijs += activity.price;
@@ -83,15 +83,15 @@ angular.module('TrouwApp.controllers', [])
             }
             function hotelStat(location) {
                 if (angular.isUndefined(location) || angular.isUndefined(location.hotel)) return;
-                return '<a href="#/location/' + location.id + '/hotel">' + location.hotel.name + '</a>';
+                return '<a href="#!' + $location.path() + '#hotel">' + location.hotel.name + '</a>';
             }
             function activiteitenStat(location) {
                 if (angular.isUndefined(location) || !angular.isArray(location.activities)) return;
-                return location.activities.length;
+                return '<a href="#!' + $location.path() + '#activiteiten">' + location.activities.length + '</a>';
             }
             function sponserStat(location) {
                 if (angular.isUndefined(location) || angular.isUndefined(location.id)) return;
-                return '<a href="#/sponser?location=' + location.id + '">Sponser!</a>';
+                return '<a href="#!/sponser?location=' + location.id + '">Sponser!</a>';
             }
             ctrl.stats = [
                 { title: "Verblijf duur", key: '<span class="glyphicon glyphicon-calendar"></span>', value: dateStat(ctrl.location) },

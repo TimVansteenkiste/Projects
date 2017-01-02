@@ -10,7 +10,7 @@ angular.module('TrouwApp', [
   'TrouwApp.directives'
 ]).
 config(['$httpProvider', '$locationProvider', '$routeProvider', function ($httpProvider, $locationProvider, $routeProvider) {
-
+    
     // Disable Caching
     if (!$httpProvider.defaults.headers.get) $httpProvider.defaults.headers.get = {};
     $httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
@@ -30,7 +30,9 @@ config(['$httpProvider', '$locationProvider', '$routeProvider', function ($httpP
                 controllerAs: 'ctrl',
                 caseInsensitiveMatch: true
             })
-			.when('/', { templateUrl: 'pages/home.html' })
-			.otherwise({ redirectTo: '/' });
+			.when('/home', { templateUrl: 'pages/home.html' })
+			.otherwise({ redirectTo: '/home' });
 
+
+    $locationProvider.hashPrefix('!');
 }]);

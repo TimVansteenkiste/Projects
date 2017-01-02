@@ -10,12 +10,35 @@
         <p><a href back><span class="glyphicon glyphicon-chevron-left"></span>Vorige</a></p>
     </div>
 </div>
+    <!-- Overzicht -->
 <div class="row">
-    <div class="col-md-7 col-sm-12">
-        <carousel items="ctrl.carouselItems"></carousel>
+    <div class="col-lg-12">
+        <h2>Overzicht</h2>
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <carousel items="ctrl.carouselItems"></carousel>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <div class="col-lg-6" style="font-size: larger; margin: 0.3em 0" ng-repeat="stat in ctrl.stats track by $index" ng-if="stat.value" title="{{stat.title}}"><span ng-bind-html="stat.key"></span> <span ng-bind-html="stat.value"></span></div>
+            </div>
+        </div>
+        <div class="divider"></div>
     </div>
-    <div class="col-md-5 col-sm-12">
-        <div class="col-lg-6" style="font-size: larger; margin: 0.3em 0" ng-repeat="stat in ctrl.stats track by $index" ng-if="stat.value" title="{{stat.title}}"><span ng-bind-html="stat.key"></span> <span ng-bind-html="stat.value"></span></div> 
+</div>
+<br/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- Hotel-->
+<div id="hotel" class="row" ng-if="ctrl.location.hotel">
+    <div class="col-lg-12">
+        <h2>Hotel</h2>
+        <p>Naam: <span>{{ctrl.location.hotel.name}}</span> <a href="{{ctrl.location.hotel.location}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></p>
+        <p>Prijs per Nacht: <span>{{ctrl.location.hotel.price.toFixed(2) + '&euro;'}}</span></p>
+        <p>Totaal Prijs: <span>{{(ctrl.location.hotel.price * ctrl.location.hotel.nights).toFixed(2) + '&euro;'}}</span></p>
+        <div class="divider"></div>
     </div>
 </div>
     <!-- Activiteiten -->
+<div id="activiteiten" class="row">
+    <div class="col-lg-12">
+        <h2>Activiteiten</h2>
+    </div>
+</div>

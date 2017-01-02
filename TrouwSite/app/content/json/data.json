@@ -24,7 +24,9 @@
       "driveDistance": "138km",
       "hotel": {
         "name": "Hotel in Calgary",
-        "price": 100.00
+        "nights": 1,
+        "price": 100.00,
+        "location": "https://www.google.be/maps/place/Calgary,+AB,+Canada/@51.0132124,-114.3550323,10z/data=!3m1!4b1!4m5!3m4!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0486151!4d-114.0708459?hl=en"
       },
       "activities": [
         { "name":  "Rafting", "price": 55.00 }
