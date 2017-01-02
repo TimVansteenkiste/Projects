@@ -25,7 +25,7 @@ angular.module('TrouwApp.controllers', [])
                 title: flight.title,
                 timestamp: flight.start + ' - ' + flight.end,
                 description: flight.description,
-                link: '#!/flight/' + flight.id
+                sponsor: '#!/sponsor?flight=' + flight.id
             };
         }
         function locationToTimelineItem(location) {
@@ -85,21 +85,25 @@ angular.module('TrouwApp.controllers', [])
                 if (angular.isUndefined(location) || angular.isUndefined(location.hotel)) return;
                 return '<a href="#!' + $location.path() + '#hotel">' + location.hotel.name + '</a>';
             }
+            function driveStat(location) {
+                if (angular.isUndefined(location) || angular.isUndefined(location.drive)) return;
+                if (location.drive.distance > 0) return location.drive.distance + 'km';
+            }
             function activiteitenStat(location) {
                 if (angular.isUndefined(location) || !angular.isArray(location.activities)) return;
                 return '<a href="#!' + $location.path() + '#activiteiten">' + location.activities.length + '</a>';
             }
-            function sponserStat(location) {
+            function sponsorStat(location) {
                 if (angular.isUndefined(location) || angular.isUndefined(location.id)) return;
-                return '<a href="#!/sponser?location=' + location.id + '">Sponser!</a>';
+                return '<a href="#!/sponsor?location=' + location.id + '">Sponser!</a>';
             }
             ctrl.stats = [
                 { title: "Verblijf duur", key: '<span class="glyphicon glyphicon-calendar"></span>', value: dateStat(ctrl.location) },
                 { title: "Prijskaartje", key: '<span class="glyphicon glyphicon-euro"></span>', value: prijsStat(ctrl.location) },
                 { title: "Hotel", key: '<span class="glyphicon glyphicon-home"></span>', value: hotelStat(ctrl.location) },
-                { title: "Totale Rij afstand", key: '<span class="glyphicon glyphicon-road" ></span>', value: ctrl.location.driveDistance },
+                { title: "Totale Rij afstand", key: '<span class="glyphicon glyphicon-road" ></span>', value: driveStat(ctrl.location) },
                 { title: "Activiteiten", key: '<span class="glyphicon glyphicon-camera"></span>', value: activiteitenStat(ctrl.location) },
-                { title: "Sponser", key: '<span class="glyphicon glyphicon-piggy-bank"></span>', value: sponserStat(ctrl.location) }
+                { title: "Sponser", key: '<span class="glyphicon glyphicon-piggy-bank"></span>', value: sponsorStat(ctrl.location) }
             ];
         }
 

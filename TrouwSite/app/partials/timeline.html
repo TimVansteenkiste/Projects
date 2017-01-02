@@ -18,6 +18,7 @@
                     <i class="glyphicon glyphicon-{{item.badge.type}}"></i>
                 </div>
                 <div class="timeline-panel">
+                    <small class="pull-right" ng-if="item.sponsor.length > 0"><a href="{{item.sponsor}}" title="Sponser!"><span class="glyphicon glyphicon-piggy-bank"></span></a></small>
                     <div class="timeline-heading">
                         <h4 class="timeline-title">{{item.title}}</h4>
                         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{item.timestamp}}</small></p>
