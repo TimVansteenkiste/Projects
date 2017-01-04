@@ -18,6 +18,18 @@ config(['$httpProvider', '$locationProvider', '$routeProvider', function ($httpP
     $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
 
     $routeProvider
+            .when('/gift', {
+                templateUrl: 'pages/gift.html',
+                controller: 'GiftController',
+                controllerAs: 'ctrl',
+                caseInsensitiveMatch: true
+            })
+            .when('/sponsor', {
+                templateUrl: 'pages/sponsor.html',
+                controller: 'SponsorController',
+                controllerAs: 'ctrl',
+                caseInsensitiveMatch: true
+            })
             .when('/flight/:flight', {
                 templateUrl: 'pages/flight.html ',
                 controller: 'FlightController',

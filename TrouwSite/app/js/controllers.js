@@ -117,15 +117,21 @@ angular.module('TrouwApp.controllers', [])
 
         return ctrl;
     }])
-    .controller('FlightController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
+    .controller('SponsorController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
         var ctrl = this;
 
-        ctrl.flight = { title: $routeParams['flight'] };
+        return ctrl;
+    }])
+    .controller('GiftController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
+        var ctrl = this;
 
-        dataService.getFlight($routeParams['flight'])
-                   .then(function (flight) {
-                       ctrl.flight = flight;
-                   });
+        function getDecoded(parameter) {
+            return $routeParams[parameter];
+        }
+
+        ctrl.title = getDecoded('t');
+        ctrl.message = getDecoded('m');
+        ctrl.afzender = getDecoded('a');
 
         return ctrl;
     }])

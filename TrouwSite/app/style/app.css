@@ -3,14 +3,27 @@ body {
   min-width: 500px;
 }
 
-.container {
-    border: 1px solid #eee;
-    background-color: rgba(255,255,255,0.96);
+.page-header {
+    margin-top: 1em;
 }
+
+.container {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    background-color: rgba(255,255,255,0.93);
+    min-height: 100vh;
+    position: relative;
+}
+
 
 .footer {
     border-top: 1px solid #eee;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.footer p {
+    margin: 0px;
 }
 
 .divider {
@@ -29,4 +42,26 @@ body {
     min-width: 100%;
     max-width: 105%;
     min-height: 100%;
+}
+
+.giftcard {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.giftcard .qrcode {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-left: 1px solid #eee;
+    text-align: center;
+}
+
+.giftcard .qrcode img {
+    margin: auto;
 }
