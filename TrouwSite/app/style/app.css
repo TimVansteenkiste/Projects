@@ -15,6 +15,9 @@ body {
     position: relative;
 }
 
+.content {
+    padding-bottom: 30px;
+}
 
 .footer {
     border-top: 1px solid #eee;

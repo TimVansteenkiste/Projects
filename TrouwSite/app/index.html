@@ -22,8 +22,10 @@
 <body role="main">
     <img src="style/background.png" id="bg" alt="" />
     <div class="container">
-        <ng-view></ng-view>
-        <div class="footer row col-lg-12"><p class="text-center"><span>&copy;</span> Eveline en Tim trouwen.</p></div>
+        <div class="content">
+            <ng-view></ng-view>
+        </div>
+        <div class="footer row col-xs-12"><p class="text-center"><span>&copy;</span> Eveline en Tim trouwen.</p></div>
     </div>
     <toaster-container toaster-options="{
         'close-button':{
