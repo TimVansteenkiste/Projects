@@ -47,6 +47,17 @@ body {
     min-height: 100%;
 }
 
+.preview {
+    padding: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#beschrijving .preview {
+    display: none;
+    visibility: hidden;
+}
+
 .giftcard {
     position: relative;
     background-color: #fff;

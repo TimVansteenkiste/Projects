@@ -99,7 +99,7 @@ angular.module('TrouwApp.controllers', [])
             }
             ctrl.stats = [
                 { title: "Verblijf duur", key: '<span class="glyphicon glyphicon-calendar"></span>', value: dateStat(ctrl.location) },
-                { title: "Prijskaartje", key: '<span class="glyphicon glyphicon-euro"></span>', value: prijsStat(ctrl.location) },
+                //{ title: "Prijskaartje", key: '<span class="glyphicon glyphicon-euro"></span>', value: prijsStat(ctrl.location) },
                 { title: "Hotel", key: '<span class="glyphicon glyphicon-home"></span>', value: hotelStat(ctrl.location) },
                 { title: "Totale Rij afstand", key: '<span class="glyphicon glyphicon-road" ></span>', value: driveStat(ctrl.location) },
                 { title: "Activiteiten", key: '<span class="glyphicon glyphicon-camera"></span>', value: activiteitenStat(ctrl.location) },

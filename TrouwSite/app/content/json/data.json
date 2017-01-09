@@ -1,13 +1,17 @@
 ﻿{
+  "rental": {
+    "Firm": "Sunny Cars",
+    "PickUp": "Calgary Airport",
+    "DropOff": "Vancouver Airport",
+    "Category": "Ford Focus",
+    "Price": 1301.00
+  },
   "flights": [
     {
       "id": "to",
       "title": "Brussels (BRU) - Calgary, Alberta (YYC)",
       "start": "11/07, 10u35",
       "end": "11/07, 13u40",
-      "stats": {
-
-      },
       "description": "<img class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\" alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/><p class=\"col-lg-10 col-md-9 col-sm-8 col-xs-12\">Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
     },
     {
@@ -15,9 +19,6 @@
       "title": "Vancouver, Brit. Columbia (YVR) - Brussels(ZYR)",
       "start": "30/07, 13u30",
       "end": "31/07, 11u51",
-      "stats": {
-
-      },
       "description": "<img class=\"col-md-4\" alt=\"Air France\" src=\"./content/AirFrance_Logo.png\"/><p class=\"col-md-8\">Aan alles komt een einde, zo ook aan dit avontuur.</p>"
     }
   ],
@@ -27,116 +28,275 @@
       "title": "Calgary",
       "start": "11/07",
       "end": "12/07",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/>",
       "maps": "https://www.google.be/maps/place/Calgary,+AB,+Canada/@51.0132124,-114.3550323,10z/data=!3m1!4b1!4m5!3m4!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0486151!4d-114.0708459?hl=en",
       "drive": {
-        "destination": "kanaskis",
+        "destination": "kananaskis",
         "distance": 86
       },
       "hotel": {
-        "name": "Hotel in Calgary",
+        "name": "Sandman Hotel Calgary Airport",
+        "room": "Standard",
         "nights": 1,
-        "price": 100.00,
-        "location": "https://www.google.be/maps/place/Kensington+Riverside+Inn/@51.0506991,-114.092181,15z/data=!4m15!1m9!2m8!1sHotels!3m6!1sHotels!2s51.0486151,+-114.0708459!3s0x537170039f843fd5:0x266d3bb1b652b63a!4m2!1d-114.0708459!2d51.0486151!3m4!1s0x0:0x3fb531d2909bd125!8m2!3d51.0518083!4d-114.0873528?hl=en"
-      },
-      "activities": [
-        {
-          "name": "Rafting",
-          "price": 55.00
-        }
-      ]
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Sandman+Hotel+%26+Suites+Calgary+Airport/@51.0949988,-114.001726,17z/data=!3m1!4b1!4m5!3m4!1s0x537164f3c6a542ad:0xc3b2448ef845c6c4!8m2!3d51.0949955!4d-113.999532?hl=en"
+      }
     },
     {
-      "id": "kanaskis",
-      "title": "Kanaskis Village",
+      "id": "kananaskis",
+      "title": "Kananaskis Village",
       "start": "12/07",
       "end": "14/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Kananaskis,+AB,+Canada/@51.0762325,-115.2687629,11z/data=!4m5!3m4!1s0x5370dbf8317dea0f:0xda985d813d38ea08!8m2!3d51.0763355!4d-115.1288005?hl=en",
       "drive": {
         "destination": "banff",
         "distance": 43
-      }
+      },
+      "hotel": {
+        "name": "Delta Lodge at Kananaskis",
+        "room": "Standard",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Delta+Hotels+by+Marriott+Kananaskis+Lodge/@50.9180011,-115.1485249,17z/data=!3m1!4b1!4m5!3m4!1s0x5370ca3eb3ef0f85:0x8daf32360bd6168f!8m2!3d50.9179977!4d-115.1463309?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Kananaskis Heli - First Nations Heritage Tour",
+          "description": "",
+          "price": 0.00
+        }
+      ]
     },
     {
       "id": "banff",
       "title": "Banff National Park",
       "start": "14/07",
       "end": "16/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Banff+National+Park/@51.3727129,-115.803092,10z/data=!4m5!3m4!1s0x5377662b8c929195:0xc09de268accad7e6!8m2!3d51.4968464!4d-115.9280561?hl=en",
       "drive": {
         "destination": "louise",
         "distance": 57
-      }
+      },
+      "hotel": {
+        "name": "Banff Inn",
+        "room": "Standard",
+        "nights": 2,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Banff+Inn/@51.1838623,-115.5644906,17z/data=!3m1!4b1!4m5!3m4!1s0x5370ca4d8310f95d:0xf64d217148107f21!8m2!3d51.183859!4d-115.5622966?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Banff Adventures Canoe Tour",
+          "description": "",
+          "price": 0.00
+        },
+        {
+          "name": "Gondola & Cruise Tour",
+          "description": "",
+          "price": 0.00
+        }
+      ]
     },
     {
       "id": "louise",
       "title": "Lake Louise",
       "start": "16/07",
       "end": "17/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Lake+Louise,+AB,+Canada/@51.4201324,-116.2260751,13z/data=!3m1!4b1!4m5!3m4!1s0x53775d28a0e1ce11:0x3c373c7b6365bce6!8m2!3d51.4253705!4d-116.1772552?hl=en",
       "drive": {
         "destination": "jasper",
         "distance": 233
-      }
+      },
+      "hotel": {
+        "name": "Deer Lodge",
+        "room": "Heritage Room",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Deer+Lodge/@51.4171313,-116.2112,17z/data=!3m1!4b1!4m5!3m4!1s0x53775d1209af9a35:0xb81ac139b5cba35b!8m2!3d51.417128!4d-116.209006?hl=en"
+      },
+      "activities": []
     },
     {
       "id": "jasper",
       "title": "Jasper",
       "start": "17/07",
       "end": "19/07",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Jasper National Park\" src=\"./content/jasper/preview.jpg\"/> <p>De streek rond Jasper is ronduit adembenemend mooi. De variëteit aan landschappen lijkt oneindig. Het hoogtepunt in deze streek is Maligne Lake, een afgelegen meer te midden van de bergen. Het park is vooral een paradijs voor wandelaars en mountainbikers. Je kunt er ook kajakken en raften.</p>",
+      "maps": "https://www.google.be/maps/place/Jasper,+AB,+Canada/@52.8663248,-118.0796919,12z/data=!4m5!3m4!1s0x53832b0868553e29:0x1f2002bd0b192882!8m2!3d52.8736786!4d-118.0813581?hl=en",
+      "images": [
+        { "src": "./content/jasper/preview.jpg" },
+        { "src": "./content/jasper/MaligneLake.jpg" }
+      ],
       "drive": {
         "destination": "clearwater",
         "distance": 318
-      }
+      },
+      "hotel": {
+        "name": "Marmot Lodge",
+        "room": "Standard",
+        "nights": 2,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Marmot+Lodge/@52.887481,-118.0797796,17z/data=!3m1!4b1!4m5!3m4!1s0x53832b6c55329f87:0x2459e4d22bdf1ebd!8m2!3d52.8874778!4d-118.0775856?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Spirit Island Cruise on Maligne Lake",
+          "description": "",
+          "price": 0.00
+        },
+        {
+          "name": "White Water Rafting",
+          "description": "",
+          "price": 0.00
+        },
+        {
+          "name": "Ice Explorer Ride & Skywalk",
+          "description": "<p>Met de \"Ice Explorer\", een aangepast 4x4 voertuig, over de Athabasca gletsjer trekken die zich over 6km uitstrekt. Verder de gletjer vanop 280m hoogte bewonderen vanop de gelazen skywalk die een uitzicht bied over Sunwata Canyon.</p>",
+          "price": 140.00
+        }
+      ]
     },
     {
       "id": "clearwater",
       "title": "Clearwater",
       "start": "19/07",
       "end": "21/07",
-      "driveDistance": "123km"
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Clearwater,+BC,+Canada/@51.6508171,-120.0968184,12z/data=!4m5!3m4!1s0x5381dbdb2d8457b5:0x9b883441ab13d431!8m2!3d51.6510712!4d-120.0381726?hl=en",
+      "drive": {
+        "destination": "kamloops",
+        "distance": 123
+      },
+      "hotel": {
+        "name": "Helmcken Falls Lodge",
+        "room": "Standard",
+        "nights": 2,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Helmcken+Falls+Lodge/@51.9376461,-120.0600311,17z/data=!3m1!4b1!4m5!3m4!1s0x5381dbc50eb1cc3d:0xddaab511072ff93d!8m2!3d51.9376428!4d-120.0578371?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Interior Whitewater Expedition Rafting",
+          "description": "",
+          "price": 0.00
+        }
+      ]
     },
     {
       "id": "kamloops",
       "title": "Kamloops",
       "start": "21/07",
       "end": "22/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Kamloops,+BC,+Canada/@50.7418522,-120.5707602,10z/data=!3m1!4b1!4m5!3m4!1s0x537e2cd33d0d3b31:0xd23e96aa9a6945e7!8m2!3d50.674522!4d-120.3272674?hl=en",
       "drive": {
         "destination": "harrison",
         "distance": 244
-      }
+      },
+      "hotel": {
+        "name": "Accent Inn Kamloops",
+        "room": "Standard",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Accent+Inns+Kamloops/@50.6625091,-120.3544883,17z/data=!3m1!4b1!4m5!3m4!1s0x537e2c5ccd1effcd:0xbadddc1da24f5b72!8m2!3d50.6625057!4d-120.3522943?hl=en"
+      },
+      "activities": []
     },
     {
       "id": "harrison",
       "title": "Harrison Hot Springs",
       "start": "22/07",
       "end": "24/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Harrison+Hot+Springs,+BC,+Canada/@49.2963765,-121.8223944,13z/data=!3m1!4b1!4m5!3m4!1s0x548411f357b6823d:0x29d5d3341634104e!8m2!3d49.300141!4d-121.785316?hl=en",
       "drive": {
         "destination": "victoria",
         "distance": 220
-      }
+      },
+      "hotel": {
+        "name": "Harrison Hot Springs Resort & Spa",
+        "room": "Main Hotel",
+        "nights": 2,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Harrison+Hot+Springs+Resort+%26+Spa/@49.3036114,-121.7918115,17z/data=!3m1!4b1!4m5!3m4!1s0x5484118506c286d5:0x13b5263f6767506a!8m2!3d49.3036079!4d-121.7896175?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Tsawwassen to Swartz Bay Ferry",
+          "description": "",
+          "price": 0.00
+        }
+      ]
     },
     {
       "id": "victoria",
       "title": "Victoria",
       "start": "24/07",
       "end": "25/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Victoria,+BC,+Canada/@48.4267596,-123.4285405,12z/data=!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444?hl=en",
       "drive": {
         "destination": "tofino",
         "distance": 317
-      }
+      },
+      "hotel": {
+        "name": "Chateau Victoria Hotel & Suites",
+        "room": "Traditional",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Chateau+Victoria+Hotel+%26+Suites/@48.4220495,-123.366625,17z/data=!3m1!4b1!4m5!3m4!1s0x548f74904ae54385:0xd0d49705b3da98c4!8m2!3d48.422046!4d-123.364431?hl=en"
+      },
+      "activities": []
     },
     {
       "id": "tofino",
       "title": "Tofino",
       "start": "25/07",
       "end": "28/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Tofino,+BC,+Canada/@49.1300458,-125.9056255,13z/data=!4m5!3m4!1s0x548990ccb0093843:0x331095695a741a35!8m2!3d49.1529842!4d-125.9066184?hl=en",
       "drive": {
         "destination": "vancouver",
         "distance": 282
-      }
+      },
+      "hotel": {
+        "name": "Schooner Motel",
+        "room": "Standard",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Schooner+Motel/@49.1526654,-125.9096131,17z/data=!3m1!4b1!4m5!3m4!1s0x5489972d07d322f1:0x305667737d881f04!8m2!3d49.1526619!4d-125.9074191?hl=en"
+      },
+      "activities": [
+        {
+          "name": "Whale & Bear Watching Safari",
+          "description": "",
+          "price": 348.00
+        },
+        {
+          "name": "<i class=\"fa fa-ship\"></i> Namaimo to Horseshoe Bay Ferry",
+          "description": "",
+          "price": 0.00
+        }
+      ]
     },
     {
       "id": "vancouver",
       "title": "Vancouver",
       "start": "28/07",
-      "end": "30/07"
+      "end": "30/07",
+      "description": "",
+      "maps": "https://www.google.be/maps/place/Vancouver,+BC,+Canada/@49.2578262,-123.2641539,11z/data=!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375?hl=en",
+      "hotel": {
+        "name": "Comfort Inn Downtown Vancouver",
+        "room": "Standard",
+        "nights": 1,
+        "price": 0.00,
+        "location": "https://www.google.be/maps/place/Comfort+Inn+Downtown/@49.2791913,-123.1229017,17z/data=!4m5!3m4!1s0x548673d59652d3a7:0x5321035602a456bb!8m2!3d49.278941!4d-123.122744!6m1!1e1?hl=en"
+      },
+      "activities": []
     }
   ]
 }

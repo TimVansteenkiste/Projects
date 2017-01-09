@@ -15,44 +15,45 @@
     <div class="col-xs-12">
         <h2>Overzicht</h2>
         <div class="row">
-            <div class="col-md-7 col-sm-12">
-                <carousel items="ctrl.carouselItems"></carousel>
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                <carousel items="ctrl.location.images"></carousel>
             </div>
-            <div class="col-md-5 col-sm-12">
-                <div class="col-lg-6" style="font-size: larger; margin: 0.3em 0" ng-repeat="stat in ctrl.stats track by $index" ng-if="stat.value" title="{{stat.title}}"><span ng-bind-html="stat.key"></span> <span ng-bind-html="stat.value"></span></div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                <div class="col-xs-12" style="font-size: larger; margin: 0.3em 0" ng-repeat="stat in ctrl.stats track by $index" ng-if="stat.value" title="{{stat.title}}"><span ng-bind-html="stat.key"></span> <span ng-bind-html="stat.value"></span></div>
             </div>
         </div>
     </div>
 </div>
     <!-- Beschrijving -->
-<div id="activiteiten" class="row">
+<div id="beschrijving" class="row">
     <div class="col-xs-12">
         <h2>Beschrijving</h2>
+    </div>
+    <div class="col-xs-12">
+        <div ng-bind-html="ctrl.location.description"></div>
     </div>
 </div>
     <!-- Hotel-->
 <div id="hotel" class="row" ng-if="ctrl.location.hotel">
     <div class="col-xs-12">
-        <h2>Hotel</h2>
-        <div class="col-xs-12">Naam: <span>{{ctrl.location.hotel.name}}</span> <span ng-if="ctrl.location.hotel.location.length > 0"><a href="{{ctrl.location.hotel.location}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></span></div>
-        <div class="col-xs-6">
-            <div class="row divider">
-                <div class="col-xs-6">Prijs per nacht</div>
-                <div class="col-xs-6">{{ctrl.location.hotel.price.toFixed(2) + '&euro;'}}</div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6">Totaal</div>
-                <div class="col-xs-6">{{(ctrl.location.hotel.price * ctrl.location.hotel.nights).toFixed(2) + '&euro;'}}</div>
-            </div>
-        </div>
+        <h3><pan class="glyphicon glyphicon-home"></pan> {{ctrl.location.hotel.name}} <span ng-if="ctrl.location.hotel.location.length > 0"><a href="{{ctrl.location.hotel.location}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></span></h3>
+    </div>
+    <div class="col-xs-12">
+        <p>Kamer Type: <span>{{ctrl.location.hotel.room}}</span></p>
+        <p>Aantal Overnachtingen: <span>{{ctrl.location.hotel.nights}}</span></p>
+    </div>
+    <div class="col-xs-12">
+        <div ng-bind-html="ctrl.location.hotel.description"></div>
     </div>
 </div>
     <!-- Activiteiten -->
 <div id="activiteiten" class="row" ng-if="ctrl.location.activities.length > 0">
     <div class="col-xs-12">
-        <h2>Activiteiten</h2>
+        <h3><span class="glyphicon glyphicon-camera"></span> Activiteiten</h3>
+    </div>
+    <div class="col-xs-12">
         <ul>
-            <li ng-repeat="activity in ctrl.location.activities">{{activity.name}} ({{activity.price.toFixed(2) + '&euro;'}})</li>
+            <li ng-repeat="activity in ctrl.location.activities"><h3><span ng-bind-html="activity.name"></span> - <span ng-bind-html="activity.description"></span></h3></li>
         </ul>
     </div>
 </div>

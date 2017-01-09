@@ -12,7 +12,8 @@
     "angular-mocks": "~1.5.0",
     "bootstrap": "~3.3.7",
     "angularjs-toaster": "~0.4.16",
-    "angular-qrcode": "~6.2.1"
+    "angular-qrcode": "~6.2.1",
+    "font-awesome": "~4.7.0"
   },
   "resolutions": {
     "angular": "1.6.1"
