@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <div class="col-xs-12">
         <div class="page-header">
-            <h1>{{ctrl.location.title}} <small ng-if="ctrl.location.maps.length > 0"><a href="{{ctrl.location.maps}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></small></h1>
+            <h1><small ng-if="ctrl.location.maps.length > 0"><a href="{{ctrl.location.maps}}" target="_blank"><i class="fa fa-map-signs"></i></a></small> {{ctrl.location.title}}</h1>
         </div>
     </div>
 </div>
@@ -13,7 +13,7 @@
     <!-- Overzicht -->
 <div class="row">
     <div class="col-xs-12">
-        <h2>Overzicht</h2>
+        <h2><i class="fa fa-id-card-o"></i> Overzicht</h2>
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                 <carousel items="ctrl.location.images"></carousel>
@@ -27,7 +27,7 @@
     <!-- Beschrijving -->
 <div id="beschrijving" class="row">
     <div class="col-xs-12">
-        <h2>Beschrijving</h2>
+        <h2><i class="fa fa-newspaper-o"></i> Beschrijving</h2>
     </div>
     <div class="col-xs-12">
         <div ng-bind-html="ctrl.location.description"></div>
@@ -36,7 +36,7 @@
     <!-- Hotel-->
 <div id="hotel" class="row" ng-if="ctrl.location.hotel">
     <div class="col-xs-12">
-        <h3><pan class="glyphicon glyphicon-home"></pan> {{ctrl.location.hotel.name}} <span ng-if="ctrl.location.hotel.location.length > 0"><a href="{{ctrl.location.hotel.location}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></span></h3>
+        <h3><pan class="fa fa-bed"></pan> {{ctrl.location.hotel.name}} <span ng-if="ctrl.location.hotel.location.length > 0"><a href="{{ctrl.location.hotel.location}}" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a></span></h3>
     </div>
     <div class="col-xs-12">
         <p>Kamer Type: <span>{{ctrl.location.hotel.room}}</span></p>
@@ -49,7 +49,7 @@
     <!-- Activiteiten -->
 <div id="activiteiten" class="row" ng-if="ctrl.location.activities.length > 0">
     <div class="col-xs-12">
-        <h3><span class="glyphicon glyphicon-camera"></span> Activiteiten</h3>
+        <h3><i class="fa fa-ticket"></i> Activiteiten</h3>
     </div>
     <div class="col-xs-12">
         <ul>

@@ -28,7 +28,10 @@
       "title": "Calgary",
       "start": "11/07",
       "end": "12/07",
-      "description": "<img class=\"col-sm-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/>",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/> <p>Deze stad werd gesticht in 1875. Calgary werd bekend door het organiseren van de Olympische Winterspelen van 1988, ons geboortejaar. In Canada staat Calgary beter bekend voor de Stampede, de grootste rodeo ter wereld. Elk jaar in juli staat het stadje gedurende tien dagen op zijn kop. Iedereen draagt dan een cowboypak.</p><p>De stad ligt tussen de oostelijke uitlopers van de Rocky Mountains en de prairies in. De grootste stad van Alberta is een verfijnd geheel, met wolkenkrabbers, musea en theaters, maar met de sfeer van een afgelegen plek.</p>",
+      "images": [
+        { "src" : "./content/calgary/skyline.jpg" } 
+      ],
       "maps": "https://www.google.be/maps/place/Calgary,+AB,+Canada/@51.0132124,-114.3550323,10z/data=!3m1!4b1!4m5!3m4!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0486151!4d-114.0708459?hl=en",
       "drive": {
         "destination": "kananaskis",
@@ -40,14 +43,15 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Sandman+Hotel+%26+Suites+Calgary+Airport/@51.0949988,-114.001726,17z/data=!3m1!4b1!4m5!3m4!1s0x537164f3c6a542ad:0xc3b2448ef845c6c4!8m2!3d51.0949955!4d-113.999532?hl=en"
-      }
+      },
+      "activities": []
     },
     {
       "id": "kananaskis",
       "title": "Kananaskis Village",
       "start": "12/07",
       "end": "14/07",
-      "description": "",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Kananaskis Village\" src=\"./content/kananaskis/skyline.jpg\"/> <p>Kananaskis Country is een groen gebied in de uitlopers van de Rocky Mountains met meren, rivieren en aplenweiden. Het ligt ten zuidwesten van Calgary, op de grens van Banff National Park. Dit ongerepte natuurgebied, met een oppervlakte van 4000 km², is aantrekkelijk om te wandelen en wilde dieren te bekijken, zoals arenden, wolven en beren. Wij hebben het geluk om dit alles vanuit een helikopter te bewonderen.</p>",
       "maps": "https://www.google.be/maps/place/Kananaskis,+AB,+Canada/@51.0762325,-115.2687629,11z/data=!4m5!3m4!1s0x5370dbf8317dea0f:0xda985d813d38ea08!8m2!3d51.0763355!4d-115.1288005?hl=en",
       "drive": {
         "destination": "banff",
@@ -73,7 +77,10 @@
       "title": "Banff National Park",
       "start": "14/07",
       "end": "16/07",
-      "description": "",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Banff National Park\" src=\"./content/banff/skyline.jpg\"/> <p>Banff is het bekendste nationale park van de Rockies. Er zijn zo’n 25 bergen met een hoogte van meer dan 3000m en deze worden weerspiegeld in het turkooizen water van de vele meren die het park rijk is. Hier staat er ons een kanotocht en een ritje op de kabelbaan te wachten.</p>",
+      "images": [
+        { "src": "./content/banff/skyline.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Banff+National+Park/@51.3727129,-115.803092,10z/data=!4m5!3m4!1s0x5377662b8c929195:0xc09de268accad7e6!8m2!3d51.4968464!4d-115.9280561?hl=en",
       "drive": {
         "destination": "louise",
@@ -94,7 +101,7 @@
         },
         {
           "name": "Gondola & Cruise Tour",
-          "description": "",
+          "description": "Een kabelbaan breng je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
           "price": 0.00
         }
       ]
@@ -104,7 +111,7 @@
       "title": "Lake Louise",
       "start": "16/07",
       "end": "17/07",
-      "description": "",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Lake Louise\" src=\"./content/louise/skyline.jpg\"/> <p>Het schitterende Lake Louise is een van de grootste publiekstrekkers van Banff National Park. Het is zelfs het symbool van de Rockies geworden. Het meer is beroemd wegens zijn turquoise kleur en de besneeuwde bergen eromheen.</p>",
       "maps": "https://www.google.be/maps/place/Lake+Louise,+AB,+Canada/@51.4201324,-116.2260751,13z/data=!3m1!4b1!4m5!3m4!1s0x53775d28a0e1ce11:0x3c373c7b6365bce6!8m2!3d51.4253705!4d-116.1772552?hl=en",
       "drive": {
         "destination": "jasper",
@@ -164,7 +171,7 @@
       "title": "Clearwater",
       "start": "19/07",
       "end": "21/07",
-      "description": "",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Clearwater Lake\" src=\"./content/clearwater/skyline.jpg\"/> <p>Het Clearwater Lake Provincial Park dankt zijn naam aan het meer zelf, dat zo helder is dat de bodem op 11 m diepte nog te zien is. Ook hier wagen we ons aan een raftingavontuur.</p>",
       "maps": "https://www.google.be/maps/place/Clearwater,+BC,+Canada/@51.6508171,-120.0968184,12z/data=!4m5!3m4!1s0x5381dbdb2d8457b5:0x9b883441ab13d431!8m2!3d51.6510712!4d-120.0381726?hl=en",
       "drive": {
         "destination": "kamloops",
@@ -190,7 +197,7 @@
       "title": "Kamloops",
       "start": "21/07",
       "end": "22/07",
-      "description": "",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Kamloops\" src=\"./content/kamloops/preview.jpg\"/> <p>Kamloops betekent in de taal van de Secwepemcstam ‘waar de rivieren samenkomen’. Op deze plek vloeien de North en de South Thompson River in elkaar over. De eerste Europeanen die zich hier in 1812 vestigden waren pelshandelaars die handeldreven met de inheemse bevolking.</p>",
       "maps": "https://www.google.be/maps/place/Kamloops,+BC,+Canada/@50.7418522,-120.5707602,10z/data=!3m1!4b1!4m5!3m4!1s0x537e2cd33d0d3b31:0xd23e96aa9a6945e7!8m2!3d50.674522!4d-120.3272674?hl=en",
       "drive": {
         "destination": "harrison",
@@ -210,7 +217,7 @@
       "title": "Harrison Hot Springs",
       "start": "22/07",
       "end": "24/07",
-      "description": "",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Harrison Hot Springs\" src=\"./content/harrison/preview.jpg\"/> <p>Het dorp Harrison Hot Springs is een kleine gemeenschap ten zuiden van Harrison Lake. Het is gekend om zijn warmwaterbronnen. De perfecte plek om even op adem te komen.</p>",
       "maps": "https://www.google.be/maps/place/Harrison+Hot+Springs,+BC,+Canada/@49.2963765,-121.8223944,13z/data=!3m1!4b1!4m5!3m4!1s0x548411f357b6823d:0x29d5d3341634104e!8m2!3d49.300141!4d-121.785316?hl=en",
       "drive": {
         "destination": "victoria",
@@ -225,7 +232,7 @@
       },
       "activities": [
         {
-          "name": "Tsawwassen to Swartz Bay Ferry",
+          "name": "<i class=\"fa fa-ship\"></i> Tsawwassen to Swartz Bay Ferry",
           "description": "",
           "price": 0.00
         }
@@ -271,7 +278,7 @@
       },
       "activities": [
         {
-          "name": "Whale & Bear Watching Safari",
+          "name": "<i class=\"fa fa-paw\"></i> Whale & Bear Watching Safari",
           "description": "",
           "price": 348.00
         },
