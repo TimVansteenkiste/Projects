@@ -33,7 +33,7 @@
                }
            };
        }])
-      .directive('carousel', function () {
+       .directive('carousel', function () {
           return {
               restrict: 'E',
               scope: {
@@ -68,6 +68,29 @@
                   '</ol>' +
                 '</div>'
           };
-      })
+       })
+       .directive('activityCard', ['DataService', function (dataService) {
+           return {
+               restrict: 'E',
+               scope: {
+                   id: '@'
+               },
+               link: function (scope, element, attrs) {
+                   function onIdChange(newVal, oldVal) {
+                       scope.item = undefined;
+                       if (angular.isUndefined(newVal) || newVal == oldVal) return;
+                       dataService.getActivity(scope.id).then(function (activity) { scope.item = activity; });
+                   };
+                   scope.$watch('id', onIdChange);
+
+                   onIdChange(scope.id, undefined);
+               },
+               template: '<div class="row activitycard">' +
+                         '<div class="pull-right piggybank" ng-if="id.length > 0"><a href="#!/sponsor?activity={{id}}" title="Sponser!"><span class="glyphicon glyphicon-piggy-bank"></span></a></div>' +
+                         '<div class="col-xs-4 image" ng-if="item.image.src.length > 0"><img ng-src="{{item.image.src}}" alt="{{item.image.alt}}"/></div>' +
+                         '<div class="{{item.image.src.length > 0 ? \'col-xs-8\' : \'col-xs-12\'}}"><h3 ng-bind-html="item.name"></h3><p ng-bind-html="item.description"></p></div>' +
+                         '</div>'
+           };
+       }])
     ;
 })();

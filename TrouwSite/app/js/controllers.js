@@ -34,7 +34,8 @@ angular.module('TrouwApp.controllers', [])
                 title: location.title,
                 timestamp: location.start + ' - ' + location.end,
                 description: location.description,
-                link: '#!/location/' + location.id
+                link: '#!/location/' + location.id,
+                sponsor: '#!/sponsor?location=' + location.id
             };
         }
         function timelineSort(item1, item2) {
@@ -89,9 +90,9 @@ angular.module('TrouwApp.controllers', [])
                 if (angular.isUndefined(location) || angular.isUndefined(location.drive)) return;
                 if (location.drive.distance > 0) return location.drive.distance + 'km';
             }
-            function activiteitenStat(location) {
-                if (angular.isUndefined(location) || !angular.isArray(location.activities) || location.activities.length == 0) return;
-                return '<a href="#!' + $location.path() + '#activiteiten">' + location.activities.length + '</a>';
+            function activiteitenStat(activities) {
+                if (!angular.isArray(activities) || activities.length == 0) return;
+                return '<a href="#!' + $location.path() + '#activiteiten">' + activities.length + '</a>';
             }
             function sponsorStat(location) {
                 if (angular.isUndefined(location) || angular.isUndefined(location.id)) return;
@@ -102,7 +103,7 @@ angular.module('TrouwApp.controllers', [])
                 //{ title: "Prijskaartje", key: '<span class="glyphicon glyphicon-euro"></span>', value: prijsStat(ctrl.location) },
                 { title: "Hotel", key: '<span class="fa fa-bed"></span>', value: hotelStat(ctrl.location) },
                 { title: "Totale Rij afstand", key: '<span class="fa fa-car" ></span>', value: driveStat(ctrl.location) },
-                { title: "Activiteiten", key: '<span class="fa fa-ticket"></span>', value: activiteitenStat(ctrl.location) },
+                { title: "Activiteiten", key: '<span class="fa fa-ticket"></span>', value: activiteitenStat(ctrl.activities) },
                 { title: "Sponser", key: '<span class="glyphicon glyphicon-piggy-bank"></span>', value: sponsorStat(ctrl.location) }
             ];
         }
@@ -110,8 +111,16 @@ angular.module('TrouwApp.controllers', [])
         dataService.getLocation($routeParams['location'])
                    .then(function (location) {
                        ctrl.location = location;
-                       berekenStats();
+                       ctrl.activities = [];
                        ctrl.carouselItems = [];
+                       return location.id;
+                   })
+                   .then(function (locationId) {
+                       return dataService.getActivities(locationId);
+                   })
+                   .then(function (activities) {
+                       ctrl.activities = activities;
+                       berekenStats();
                    });
         
 
@@ -119,6 +128,8 @@ angular.module('TrouwApp.controllers', [])
     }])
     .controller('SponsorController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
         var ctrl = this;
+
+
 
         return ctrl;
     }])

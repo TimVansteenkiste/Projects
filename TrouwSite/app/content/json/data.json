@@ -30,7 +30,7 @@
       "end": "12/07",
       "description": "<img class=\"col-sm-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/> <p>Deze stad werd gesticht in 1875. Calgary werd bekend door het organiseren van de Olympische Winterspelen van 1988, ons geboortejaar. In Canada staat Calgary beter bekend voor de Stampede, de grootste rodeo ter wereld. Elk jaar in juli staat het stadje gedurende tien dagen op zijn kop. Iedereen draagt dan een cowboypak.</p><p>De stad ligt tussen de oostelijke uitlopers van de Rocky Mountains en de prairies in. De grootste stad van Alberta is een verfijnd geheel, met wolkenkrabbers, musea en theaters, maar met de sfeer van een afgelegen plek.</p>",
       "images": [
-        { "src" : "./content/calgary/skyline.jpg" } 
+        { "src": "./content/calgary/skyline.jpg" }
       ],
       "maps": "https://www.google.be/maps/place/Calgary,+AB,+Canada/@51.0132124,-114.3550323,10z/data=!3m1!4b1!4m5!3m4!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0486151!4d-114.0708459?hl=en",
       "drive": {
@@ -43,8 +43,7 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Sandman+Hotel+%26+Suites+Calgary+Airport/@51.0949988,-114.001726,17z/data=!3m1!4b1!4m5!3m4!1s0x537164f3c6a542ad:0xc3b2448ef845c6c4!8m2!3d51.0949955!4d-113.999532?hl=en"
-      },
-      "activities": []
+      }
     },
     {
       "id": "kananaskis",
@@ -63,14 +62,7 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Delta+Hotels+by+Marriott+Kananaskis+Lodge/@50.9180011,-115.1485249,17z/data=!3m1!4b1!4m5!3m4!1s0x5370ca3eb3ef0f85:0x8daf32360bd6168f!8m2!3d50.9179977!4d-115.1463309?hl=en"
-      },
-      "activities": [
-        {
-          "name": "Kananaskis Heli - First Nations Heritage Tour",
-          "description": "",
-          "price": 0.00
-        }
-      ]
+      }
     },
     {
       "id": "banff",
@@ -92,19 +84,7 @@
         "nights": 2,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Banff+Inn/@51.1838623,-115.5644906,17z/data=!3m1!4b1!4m5!3m4!1s0x5370ca4d8310f95d:0xf64d217148107f21!8m2!3d51.183859!4d-115.5622966?hl=en"
-      },
-      "activities": [
-        {
-          "name": "Banff Adventures Canoe Tour",
-          "description": "",
-          "price": 0.00
-        },
-        {
-          "name": "Gondola & Cruise Tour",
-          "description": "Een kabelbaan breng je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
-          "price": 0.00
-        }
-      ]
+      }
     },
     {
       "id": "louise",
@@ -123,8 +103,7 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Deer+Lodge/@51.4171313,-116.2112,17z/data=!3m1!4b1!4m5!3m4!1s0x53775d1209af9a35:0xb81ac139b5cba35b!8m2!3d51.417128!4d-116.209006?hl=en"
-      },
-      "activities": []
+      }
     },
     {
       "id": "jasper",
@@ -147,24 +126,7 @@
         "nights": 2,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Marmot+Lodge/@52.887481,-118.0797796,17z/data=!3m1!4b1!4m5!3m4!1s0x53832b6c55329f87:0x2459e4d22bdf1ebd!8m2!3d52.8874778!4d-118.0775856?hl=en"
-      },
-      "activities": [
-        {
-          "name": "Spirit Island Cruise on Maligne Lake",
-          "description": "",
-          "price": 0.00
-        },
-        {
-          "name": "White Water Rafting",
-          "description": "",
-          "price": 0.00
-        },
-        {
-          "name": "Ice Explorer Ride & Skywalk",
-          "description": "<p>Met de \"Ice Explorer\", een aangepast 4x4 voertuig, over de Athabasca gletsjer trekken die zich over 6km uitstrekt. Verder de gletjer vanop 280m hoogte bewonderen vanop de gelazen skywalk die een uitzicht bied over Sunwata Canyon.</p>",
-          "price": 140.00
-        }
-      ]
+      }
     },
     {
       "id": "clearwater",
@@ -183,14 +145,7 @@
         "nights": 2,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Helmcken+Falls+Lodge/@51.9376461,-120.0600311,17z/data=!3m1!4b1!4m5!3m4!1s0x5381dbc50eb1cc3d:0xddaab511072ff93d!8m2!3d51.9376428!4d-120.0578371?hl=en"
-      },
-      "activities": [
-        {
-          "name": "Interior Whitewater Expedition Rafting",
-          "description": "",
-          "price": 0.00
-        }
-      ]
+      }
     },
     {
       "id": "kamloops",
@@ -209,8 +164,7 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Accent+Inns+Kamloops/@50.6625091,-120.3544883,17z/data=!3m1!4b1!4m5!3m4!1s0x537e2c5ccd1effcd:0xbadddc1da24f5b72!8m2!3d50.6625057!4d-120.3522943?hl=en"
-      },
-      "activities": []
+      }
     },
     {
       "id": "harrison",
@@ -229,21 +183,14 @@
         "nights": 2,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Harrison+Hot+Springs+Resort+%26+Spa/@49.3036114,-121.7918115,17z/data=!3m1!4b1!4m5!3m4!1s0x5484118506c286d5:0x13b5263f6767506a!8m2!3d49.3036079!4d-121.7896175?hl=en"
-      },
-      "activities": [
-        {
-          "name": "<i class=\"fa fa-ship\"></i> Tsawwassen to Swartz Bay Ferry",
-          "description": "",
-          "price": 0.00
-        }
-      ]
+      }
     },
     {
       "id": "victoria",
       "title": "Victoria",
       "start": "24/07",
       "end": "25/07",
-      "description": "",
+      "description": "<p>Victoria is de grootste stad van Vancouver Island en meteen ook de hoofdstad van Britisch Columbia. Het is een echte stad, met grote victoriaanse huizen, maar het is ook een rustige stad, met fleurige tuinen en een Engelse levensstijl.</p>",
       "maps": "https://www.google.be/maps/place/Victoria,+BC,+Canada/@48.4267596,-123.4285405,12z/data=!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444?hl=en",
       "drive": {
         "destination": "tofino",
@@ -255,15 +202,14 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Chateau+Victoria+Hotel+%26+Suites/@48.4220495,-123.366625,17z/data=!3m1!4b1!4m5!3m4!1s0x548f74904ae54385:0xd0d49705b3da98c4!8m2!3d48.422046!4d-123.364431?hl=en"
-      },
-      "activities": []
+      }
     },
     {
       "id": "tofino",
       "title": "Tofino",
       "start": "25/07",
       "end": "28/07",
-      "description": "",
+      "description": "<p>Tofino is een vissershaventje dat genesteld ligt in de Clayoquot Sound. Vroeger leefden hier duizenden indianen, nu is het in de zomer een paradijselijk dorp aan de rand van het nationale park Pacific Rim. In de zomer is het een ideale plaats om beren en walvissen te spotten.</p>",
       "maps": "https://www.google.be/maps/place/Tofino,+BC,+Canada/@49.1300458,-125.9056255,13z/data=!4m5!3m4!1s0x548990ccb0093843:0x331095695a741a35!8m2!3d49.1529842!4d-125.9066184?hl=en",
       "drive": {
         "destination": "vancouver",
@@ -275,26 +221,14 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Schooner+Motel/@49.1526654,-125.9096131,17z/data=!3m1!4b1!4m5!3m4!1s0x5489972d07d322f1:0x305667737d881f04!8m2!3d49.1526619!4d-125.9074191?hl=en"
-      },
-      "activities": [
-        {
-          "name": "<i class=\"fa fa-paw\"></i> Whale & Bear Watching Safari",
-          "description": "",
-          "price": 348.00
-        },
-        {
-          "name": "<i class=\"fa fa-ship\"></i> Namaimo to Horseshoe Bay Ferry",
-          "description": "",
-          "price": 0.00
-        }
-      ]
+      }
     },
     {
       "id": "vancouver",
       "title": "Vancouver",
       "start": "28/07",
       "end": "30/07",
-      "description": "",
+      "description": "<p>Slechts weinig steden op aarde liggen op zo’n schitterende plek als Vancouver, de stad die uitkijkt over de Straat van Georgia. De glazen kantoortorens en wolkenkrabbers steken mooi af tegen het Kustgebergte.</p>",
       "maps": "https://www.google.be/maps/place/Vancouver,+BC,+Canada/@49.2578262,-123.2641539,11z/data=!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375?hl=en",
       "hotel": {
         "name": "Comfort Inn Downtown Vancouver",
@@ -302,8 +236,91 @@
         "nights": 1,
         "price": 0.00,
         "location": "https://www.google.be/maps/place/Comfort+Inn+Downtown/@49.2791913,-123.1229017,17z/data=!4m5!3m4!1s0x548673d59652d3a7:0x5321035602a456bb!8m2!3d49.278941!4d-123.122744!6m1!1e1?hl=en"
+      }
+    }
+  ],
+  "activities": [
+    {
+      "id": "HeliTour",
+      "locationId": "kananaskis",
+      "name": "Kananaskis Heli - First Nations Heritage Tour",
+      "description": "",
+      "price": 0.00
+    },
+    {
+      "id": "CanoeTour",
+      "locationId": "banff",
+      "name": "Banff Adventures Canoe Tour",
+      "description": "",
+      "price": 0.00
+    },
+    {
+      "id": "GondolaTour",
+      "locationId": "banff",
+      "name": "Gondola & Cruise Tour",
+      "description": "Een kabelbaan breng je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
+      "price": 0.00
+    },
+    {
+      "id": "SpiritIslandCruise",
+      "locationId": "jasper",
+      "name": "Spirit Island Cruise on Maligne Lake",
+      "description": "",
+      "image": {
+        "src": "./content/jasper/SpiritIslandCruise.jpg",
+        "alt": "Spirit Island Cruise"
       },
-      "activities": []
+      "price": 0.00
+    },
+    {
+      "id": "WhiteWaterRafting",
+      "locationId": "jasper",
+      "name": "White Water Rafting",
+      "description": "",
+      "image": {
+        "src": "./content/jasper/WhiteWaterRafting.jpg",
+        "alt": "White Water Rafting"
+      },
+      "price": 0.00
+    },
+    {
+      "id": "IceExplorer",
+      "locationId": "jasper",
+      "name": "Ice Explorer Ride & Skywalk",
+      "description": "<p>Met de \"Ice Explorer\", een aangepast 4x4 voertuig, over de Athabasca gletsjer trekken die zich over 6km uitstrekt. Verder de gletjer vanop 280m hoogte bewonderen vanop de gelazen skywalk die een uitzicht bied over Sunwata Canyon.</p>",
+      "image": {
+        "src": "./content/jasper/IceExplorer.jpg",
+        "alt": "Ice Explorer Ride"
+      },
+      "price": 140.00
+    },
+    {
+      "id": "InteriorRafting",
+      "locationId": "clearwater",
+      "name": "Interior Whitewater Expedition Rafting",
+      "description": "",
+      "price": 0.00
+    },
+    {
+      "id": "TsawwassenFerry",
+      "locationId": "harrison",
+      "name": "<i class=\"fa fa-ship\"></i> Tsawwassen to Swartz Bay Ferry",
+      "description": "",
+      "price": 0.00
+    },
+    {
+      "id": "WhaleSafari",
+      "locationId": "tofino",
+      "name": "<i class=\"fa fa-paw\"></i> Whale & Bear Watching Safari",
+      "description": "",
+      "price": 348.00
+    },
+    {
+      "id": "HorseshoeFerry",
+      "locationId": "tofino",
+      "name": "<i class=\"fa fa-ship\"></i> Namaimo to Horseshoe Bay Ferry",
+      "description": "",
+      "price": 0.00
     }
   ]
 }

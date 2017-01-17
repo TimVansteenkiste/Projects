@@ -79,3 +79,31 @@ body {
 .giftcard .qrcode img {
     margin: auto;
 }
+
+.activitycard {
+    margin: 1em;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.activitycard .image {
+    padding: 0em;
+}
+
+.activitycard a {
+    font-size: 1.3em;
+    margin-right: 0.5em;
+}
+
+.activitycard a .glyphicon-piggy-bank {
+    top: 5px;
+}
+
+.activitycard img {
+    border-right: 1px solid black;
+    margin-bottom: -0.01%;
+    border-radius: 4px 0px 0px 4px;
+    width: 100%;
+    margin-right: 15px;
+}
