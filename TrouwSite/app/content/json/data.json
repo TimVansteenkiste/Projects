@@ -106,7 +106,14 @@
       "title": "Lake Louise",
       "start": "16/07",
       "end": "17/07",
-      "description": "<img class=\"col-sm-12 preview\" alt=\"Lake Louise\" src=\"./content/louise/skyline.jpg\"/> <p>Het schitterende Lake Louise is een van de grootste publiekstrekkers van Banff National Park. Het is zelfs het symbool van de Rockies geworden. Het meer is beroemd wegens zijn turquoise kleur en de besneeuwde bergen eromheen.</p>",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Lake Louise\" src=\"./content/louise/preview.jpg\"/> <p>Het schitterende Lake Louise is een van de grootste publiekstrekkers van Banff National Park. Het is zelfs het symbool van de Rockies geworden. Het meer is beroemd wegens zijn turquoise kleur en de besneeuwde bergen eromheen.</p>",
+      "images": [
+        { "src": "./content/louise/lakelouise.jpg" },
+        { "src": "./content/louise/lakecabin.jpg" },
+        { "src": "./content/louise/lakeview_01.jpg" },
+        { "src": "./content/louise/lakeview_02.jpg" },
+        { "src": "./content/louise/riverside.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Lake+Louise,+AB,+Canada/@51.4201324,-116.2260751,13z/data=!3m1!4b1!4m5!3m4!1s0x53775d28a0e1ce11:0x3c373c7b6365bce6!8m2!3d51.4253705!4d-116.1772552?hl=en",
       "drive": {
         "destination": "jasper",
@@ -122,15 +129,18 @@
     },
     {
       "id": "jasper",
-      "title": "Jasper",
+      "title": "Jasper National Park",
       "start": "17/07",
       "end": "19/07",
       "description": "<img class=\"col-xs-12 preview\" alt=\"Jasper National Park\" src=\"./content/jasper/preview.jpg\"/> <p>De streek rond Jasper is ronduit adembenemend mooi. De variëteit aan landschappen lijkt oneindig. Het hoogtepunt in deze streek is Maligne Lake, een afgelegen meer te midden van de bergen. Het park is vooral een paradijs voor wandelaars en mountainbikers. Je kunt er ook kajakken en raften.</p>",
-      "maps": "https://www.google.be/maps/place/Jasper,+AB,+Canada/@52.8663248,-118.0796919,12z/data=!4m5!3m4!1s0x53832b0868553e29:0x1f2002bd0b192882!8m2!3d52.8736786!4d-118.0813581?hl=en",
       "images": [
-        { "src": "./content/jasper/preview.jpg" },
-        { "src": "./content/jasper/MaligneLake.jpg" }
+        { "src": "./content/jasper/lakeview.jpg" },
+        { "src": "./content/jasper/river.jpg" },
+        { "src": "./content/jasper/MaligneLake.jpg" },
+        { "src": "./content/jasper/waterfall.jpg" },
+        { "src": "./content/jasper/growth.jpg" }
       ],
+      "maps": "https://www.google.be/maps/place/Jasper,+AB,+Canada/@52.8663248,-118.0796919,12z/data=!4m5!3m4!1s0x53832b0868553e29:0x1f2002bd0b192882!8m2!3d52.8736786!4d-118.0813581?hl=en",
       "drive": {
         "destination": "clearwater",
         "distance": 318
@@ -148,7 +158,14 @@
       "title": "Clearwater",
       "start": "19/07",
       "end": "21/07",
-      "description": "<img class=\"col-xs-12 preview\" alt=\"Clearwater Lake\" src=\"./content/clearwater/skyline.jpg\"/> <p>Het Clearwater Lake Provincial Park dankt zijn naam aan het meer zelf, dat zo helder is dat de bodem op 11 m diepte nog te zien is. Ook hier wagen we ons aan een raftingavontuur.</p>",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Clearwater Lake\" src=\"./content/clearwater/preview.jpg\"/> <p>Het Clearwater Lake Provincial Park dankt zijn naam aan het meer zelf, dat zo helder is dat de bodem op 11 m diepte nog te zien is. Ook hier wagen we ons aan een raftingavontuur.</p>",
+      "images": [
+        { "src": "./content/clearwater/lodge.jpg" },
+        { "src": "./content/clearwater/lake.jpg" },
+        { "src": "./content/clearwater/HelmckenFalls.jpg" },
+        { "src": "./content/clearwater/clearwater_02.jpg" },
+        { "src": "./content/clearwater/clearwater.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Clearwater,+BC,+Canada/@51.6508171,-120.0968184,12z/data=!4m5!3m4!1s0x5381dbdb2d8457b5:0x9b883441ab13d431!8m2!3d51.6510712!4d-120.0381726?hl=en",
       "drive": {
         "destination": "kamloops",
@@ -168,6 +185,7 @@
       "start": "21/07",
       "end": "22/07",
       "description": "<img class=\"col-xs-12 preview\" alt=\"Kamloops\" src=\"./content/kamloops/preview.jpg\"/> <p>Kamloops betekent in de taal van de Secwepemcstam ‘waar de rivieren samenkomen’. Op deze plek vloeien de North en de South Thompson River in elkaar over. De eerste Europeanen die zich hier in 1812 vestigden waren pelshandelaars die handeldreven met de inheemse bevolking.</p>",
+      "images": [],
       "maps": "https://www.google.be/maps/place/Kamloops,+BC,+Canada/@50.7418522,-120.5707602,10z/data=!3m1!4b1!4m5!3m4!1s0x537e2cd33d0d3b31:0xd23e96aa9a6945e7!8m2!3d50.674522!4d-120.3272674?hl=en",
       "drive": {
         "destination": "harrison",
@@ -187,6 +205,7 @@
       "start": "22/07",
       "end": "24/07",
       "description": "<img class=\"col-xs-12 preview\" alt=\"Harrison Hot Springs\" src=\"./content/harrison/preview.jpg\"/> <p>Het dorp Harrison Hot Springs is een kleine gemeenschap ten zuiden van Harrison Lake. Het is gekend om zijn warmwaterbronnen. De perfecte plek om even op adem te komen.</p>",
+      "images": [],
       "maps": "https://www.google.be/maps/place/Harrison+Hot+Springs,+BC,+Canada/@49.2963765,-121.8223944,13z/data=!3m1!4b1!4m5!3m4!1s0x548411f357b6823d:0x29d5d3341634104e!8m2!3d49.300141!4d-121.785316?hl=en",
       "drive": {
         "destination": "victoria",
@@ -206,6 +225,7 @@
       "start": "24/07",
       "end": "25/07",
       "description": "<p>Victoria is de grootste stad van Vancouver Island en meteen ook de hoofdstad van Britisch Columbia. Het is een echte stad, met grote victoriaanse huizen, maar het is ook een rustige stad, met fleurige tuinen en een Engelse levensstijl.</p>",
+      "images": [],
       "maps": "https://www.google.be/maps/place/Victoria,+BC,+Canada/@48.4267596,-123.4285405,12z/data=!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444?hl=en",
       "drive": {
         "destination": "tofino",
@@ -225,6 +245,7 @@
       "start": "25/07",
       "end": "28/07",
       "description": "<p>Tofino is een vissershaventje dat genesteld ligt in de Clayoquot Sound. Vroeger leefden hier duizenden indianen, nu is het in de zomer een paradijselijk dorp aan de rand van het nationale park Pacific Rim. In de zomer is het een ideale plaats om beren en walvissen te spotten.</p>",
+      "images": [],
       "maps": "https://www.google.be/maps/place/Tofino,+BC,+Canada/@49.1300458,-125.9056255,13z/data=!4m5!3m4!1s0x548990ccb0093843:0x331095695a741a35!8m2!3d49.1529842!4d-125.9066184?hl=en",
       "drive": {
         "destination": "vancouver",
@@ -244,6 +265,7 @@
       "start": "28/07",
       "end": "30/07",
       "description": "<p>Slechts weinig steden op aarde liggen op zo’n schitterende plek als Vancouver, de stad die uitkijkt over de Straat van Georgia. De glazen kantoortorens en wolkenkrabbers steken mooi af tegen het Kustgebergte.</p>",
+      "images": [],
       "maps": "https://www.google.be/maps/place/Vancouver,+BC,+Canada/@49.2578262,-123.2641539,11z/data=!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375?hl=en",
       "hotel": {
         "name": "Comfort Inn Downtown Vancouver",
@@ -260,6 +282,10 @@
       "locationId": "kananaskis",
       "name": "Kananaskis Heli - First Nations Heritage Tour",
       "description": "",
+      "image": {
+        "src": "./content/kananaskis/helitour.jpg",
+        "alt": "Kananaskis Heli Tour"
+      },
       "price": 0.00
     },
     {
@@ -267,6 +293,10 @@
       "locationId": "banff",
       "name": "Banff Adventures Canoe Tour",
       "description": "",
+      "image": {
+        "src": "./content/banff/canoe.jpg",
+        "alt": "Canoe Tour"
+      },
       "price": 0.00
     },
     {
@@ -274,6 +304,10 @@
       "locationId": "banff",
       "name": "Gondola & Cruise Tour",
       "description": "Een kabelbaan breng je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
+      "image": {
+        "src": "./content/banff/gondola.jpg",
+        "alt": "Gondola"
+      },
       "price": 0.00
     },
     {
@@ -313,6 +347,10 @@
       "id": "InteriorRafting",
       "locationId": "clearwater",
       "name": "Interior Whitewater Expedition Rafting",
+      "image": {
+        "src": "./content/clearwater/rafting.jpg" ,
+        "alt": "Interior Whitewater Rafting"
+      },
       "description": "",
       "price": 0.00
     },
