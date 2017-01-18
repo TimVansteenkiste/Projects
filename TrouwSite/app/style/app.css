@@ -33,6 +33,10 @@ body {
     border-bottom: 1px solid #eee;
 }
 
+.center {
+    text-align: center;
+}
+
 .glyphicon-camera, .glyphicon-piggy-bank {
     top: 0.1em;
 }
@@ -49,7 +53,7 @@ body {
 
 .preview {
     padding: 0;
-    border: 1px solid #eee;
+    border: 1px solid black;
     border-radius: 5px;
 }
 

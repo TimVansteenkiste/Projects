@@ -12,14 +12,14 @@
       "title": "Brussels (BRU) - Calgary, Alberta (YYC)",
       "start": "11/07, 10u35",
       "end": "11/07, 13u40",
-      "description": "<img class=\"col-lg-2 col-md-3 col-sm-4 col-xs-12\" alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/><p class=\"col-lg-10 col-md-9 col-sm-8 col-xs-12\">Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
+      "description": "<div class=\"col-xs-12 center\"><img alt=\"KLM Royal Dutch Airlines\" src=\"./content/KLM_Logo.png\"/></div><p>Na een korte tussenstop in Amsterdam, brengt KLM Royal Dutch Airlines ons tot op onze bestemming: Calgary, Alberta.</p>"
     },
     {
       "id": "from",
       "title": "Vancouver, Brit. Columbia (YVR) - Brussels(ZYR)",
       "start": "30/07, 13u30",
       "end": "31/07, 11u51",
-      "description": "<img class=\"col-md-4\" alt=\"Air France\" src=\"./content/AirFrance_Logo.png\"/><p class=\"col-md-8\">Aan alles komt een einde, zo ook aan dit avontuur.</p>"
+      "description": "<div class=\"col-xs-12 center\"><img alt=\"Air France\" src=\"./content/AirFrance_Logo.png\"/></div><p>Aan alles komt een einde, zo ook aan dit avontuur.</p>"
     }
   ],
   "locations": [
@@ -28,9 +28,13 @@
       "title": "Calgary",
       "start": "11/07",
       "end": "12/07",
-      "description": "<img class=\"col-sm-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/> <p>Deze stad werd gesticht in 1875. Calgary werd bekend door het organiseren van de Olympische Winterspelen van 1988, ons geboortejaar. In Canada staat Calgary beter bekend voor de Stampede, de grootste rodeo ter wereld. Elk jaar in juli staat het stadje gedurende tien dagen op zijn kop. Iedereen draagt dan een cowboypak.</p><p>De stad ligt tussen de oostelijke uitlopers van de Rocky Mountains en de prairies in. De grootste stad van Alberta is een verfijnd geheel, met wolkenkrabbers, musea en theaters, maar met de sfeer van een afgelegen plek.</p>",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Calgary Skyline\" src=\"./content/calgary/skyline.jpg\"/> <p>Deze stad werd gesticht in 1875. Calgary werd bekend door het organiseren van de Olympische Winterspelen van 1988, ons geboortejaar. In Canada staat Calgary beter bekend voor de Stampede, de grootste rodeo ter wereld. Elk jaar in juli staat het stadje gedurende tien dagen op zijn kop. Iedereen draagt dan een cowboypak.</p><p>De stad ligt tussen de oostelijke uitlopers van de Rocky Mountains en de prairies in. De grootste stad van Alberta is een verfijnd geheel, met wolkenkrabbers, musea en theaters, maar met de sfeer van een afgelegen plek.</p>",
       "images": [
-        { "src": "./content/calgary/skyline.jpg" }
+        { "src": "./content/calgary/city.jpg" },
+        { "src": "./content/calgary/byNight.jpg" },
+        { "src": "./content/calgary/tourisme.jpg" },
+        { "src": "./content/calgary/bridge.jpg" },
+        { "src": "./content/calgary/western.jpg" }
       ],
       "maps": "https://www.google.be/maps/place/Calgary,+AB,+Canada/@51.0132124,-114.3550323,10z/data=!3m1!4b1!4m5!3m4!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0486151!4d-114.0708459?hl=en",
       "drive": {
@@ -50,7 +54,14 @@
       "title": "Kananaskis Village",
       "start": "12/07",
       "end": "14/07",
-      "description": "<img class=\"col-sm-12 preview\" alt=\"Kananaskis Village\" src=\"./content/kananaskis/skyline.jpg\"/> <p>Kananaskis Country is een groen gebied in de uitlopers van de Rocky Mountains met meren, rivieren en aplenweiden. Het ligt ten zuidwesten van Calgary, op de grens van Banff National Park. Dit ongerepte natuurgebied, met een oppervlakte van 4000 km², is aantrekkelijk om te wandelen en wilde dieren te bekijken, zoals arenden, wolven en beren. Wij hebben het geluk om dit alles vanuit een helikopter te bewonderen.</p>",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Kananaskis Village\" src=\"./content/kananaskis/preview.jpg\"/> <p>Kananaskis Country is een groen gebied in de uitlopers van de Rocky Mountains met meren, rivieren en aplenweiden. Het ligt ten zuidwesten van Calgary, op de grens van Banff National Park. Dit ongerepte natuurgebied, met een oppervlakte van 4000 km², is aantrekkelijk om te wandelen en wilde dieren te bekijken, zoals arenden, wolven en beren. Wij hebben het geluk om dit alles vanuit een helikopter te bewonderen.</p>",
+      "images": [
+        { "src": "./content/kananaskis/deltaLodge.jpg" },
+        { "src": "./content/kananaskis/kananaskis.jpg" },
+        { "src": "./content/kananaskis/fountain.jpg" },
+        { "src": "./content/kananaskis/airview.jpg" },
+        { "src": "./content/kananaskis/view.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Kananaskis,+AB,+Canada/@51.0762325,-115.2687629,11z/data=!4m5!3m4!1s0x5370dbf8317dea0f:0xda985d813d38ea08!8m2!3d51.0763355!4d-115.1288005?hl=en",
       "drive": {
         "destination": "banff",
@@ -69,9 +80,13 @@
       "title": "Banff National Park",
       "start": "14/07",
       "end": "16/07",
-      "description": "<img class=\"col-sm-12 preview\" alt=\"Banff National Park\" src=\"./content/banff/skyline.jpg\"/> <p>Banff is het bekendste nationale park van de Rockies. Er zijn zo’n 25 bergen met een hoogte van meer dan 3000m en deze worden weerspiegeld in het turkooizen water van de vele meren die het park rijk is. Hier staat er ons een kanotocht en een ritje op de kabelbaan te wachten.</p>",
+      "description": "<img class=\"col-sm-12 preview\" alt=\"Banff National Park\" src=\"./content/banff/preview.jpg\"/> <p>Banff is het bekendste nationale park van de Rockies. Er zijn zo’n 25 bergen met een hoogte van meer dan 3000m en deze worden weerspiegeld in het turkooizen water van de vele meren die het park rijk is. Hier staat er ons een kanotocht en een ritje op de kabelbaan te wachten.</p>",
       "images": [
-        { "src": "./content/banff/skyline.jpg" }
+        { "src": "./content/banff/nationalpark.jpg" },
+        { "src": "./content/banff/skyline.jpg" },
+        { "src": "./content/banff/river.jpg" },
+        { "src": "./content/banff/wildlife.jpg" },
+        { "src": "./content/banff/fox.jpg" }
       ],
       "maps": "https://www.google.be/maps/place/Banff+National+Park/@51.3727129,-115.803092,10z/data=!4m5!3m4!1s0x5377662b8c929195:0xc09de268accad7e6!8m2!3d51.4968464!4d-115.9280561?hl=en",
       "drive": {
