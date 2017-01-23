@@ -186,7 +186,11 @@
       "end": "22/07",
       "description": "<img class=\"col-xs-12 preview\" alt=\"Kamloops\" src=\"./content/kamloops/preview.jpg\"/> <p>Kamloops betekent in de taal van de Secwepemcstam ‘waar de rivieren samenkomen’. Op deze plek vloeien de North en de South Thompson River in elkaar over. De eerste Europeanen die zich hier in 1812 vestigden waren pelshandelaars die handeldreven met de inheemse bevolking.</p>",
       "images": [
-        { "src": "./content/kamloops/nightview.jpg" }
+        { "src": "./content/kamloops/skyline.jpg" },
+        { "src": "./content/kamloops/nightview.jpg" },
+        { "src": "./content/kamloops/hotel.jpg" },
+        { "src": "./content/kamloops/mountains.jpg" },
+        { "src": "./content/kamloops/river.jpg" }
       ],
       "maps": "https://www.google.be/maps/place/Kamloops,+BC,+Canada/@50.7418522,-120.5707602,10z/data=!3m1!4b1!4m5!3m4!1s0x537e2cd33d0d3b31:0xd23e96aa9a6945e7!8m2!3d50.674522!4d-120.3272674?hl=en",
       "drive": {
@@ -209,7 +213,10 @@
       "description": "<img class=\"col-xs-12 preview\" alt=\"Harrison Hot Springs\" src=\"./content/harrison/preview.jpg\"/> <p>Het dorp Harrison Hot Springs is een kleine gemeenschap ten zuiden van Harrison Lake. Het is gekend om zijn warmwaterbronnen. De perfecte plek om even op adem te komen.</p>",
       "images": [
         { "src": "./content/harrison/spa.jpg" },
-        { "src": "./content/harrison/pool.jpg" }
+        { "src": "./content/harrison/pool.jpg" },
+        { "src": "./content/harrison/beach.jpg" },
+        { "src": "./content/harrison/lake.jpg" },
+        { "src": "./content/harrison/spring.jpg" }
       ],
       "maps": "https://www.google.be/maps/place/Harrison+Hot+Springs,+BC,+Canada/@49.2963765,-121.8223944,13z/data=!3m1!4b1!4m5!3m4!1s0x548411f357b6823d:0x29d5d3341634104e!8m2!3d49.300141!4d-121.785316?hl=en",
       "drive": {
@@ -229,8 +236,14 @@
       "title": "Victoria",
       "start": "24/07",
       "end": "25/07",
-      "description": "<p>Victoria is de grootste stad van Vancouver Island en meteen ook de hoofdstad van Britisch Columbia. Het is een echte stad, met grote victoriaanse huizen, maar het is ook een rustige stad, met fleurige tuinen en een Engelse levensstijl.</p>",
-      "images": [],
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Victoria\" src=\"./content/victoria/preview.jpg\"/> <p>Victoria is de grootste stad van Vancouver Island en meteen ook de hoofdstad van Britisch Columbia. Het is een echte stad, met grote victoriaanse huizen, maar het is ook een rustige stad, met fleurige tuinen en een Engelse levensstijl.</p>",
+      "images": [
+        { "src": "./content/victoria/skyline.jpg" },
+        { "src": "./content/victoria/castle.jpg" },
+        { "src": "./content/victoria/victoriaans.jpg" },
+        { "src": "./content/victoria/gardens.jpg" },
+        { "src": "./content/victoria/univercity.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Victoria,+BC,+Canada/@48.4267596,-123.4285405,12z/data=!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444?hl=en",
       "drive": {
         "destination": "tofino",
@@ -249,8 +262,14 @@
       "title": "Tofino",
       "start": "25/07",
       "end": "28/07",
-      "description": "<p>Tofino is een vissershaventje dat genesteld ligt in de Clayoquot Sound. Vroeger leefden hier duizenden indianen, nu is het in de zomer een paradijselijk dorp aan de rand van het nationale park Pacific Rim. In de zomer is het een ideale plaats om beren en walvissen te spotten.</p>",
-      "images": [],
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Tofino\" src=\"./content/tofino/preview.jpg\"/> <p>Tofino is een vissershaventje dat genesteld ligt in de Clayoquot Sound. Vroeger leefden hier duizenden indianen, nu is het in de zomer een paradijselijk dorp aan de rand van het nationale park Pacific Rim. In de zomer is het een ideale plaats om beren en walvissen te spotten.</p>",
+      "images": [
+        { "src": "./content/tofino/beach.jpg" },
+        { "src": "./content/tofino/river.jpg" },
+        { "src": "./content/tofino/trees.jpg" },
+        { "src": "./content/tofino/islands.jpg" },
+        { "src": "./content/tofino/rock.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Tofino,+BC,+Canada/@49.1300458,-125.9056255,13z/data=!4m5!3m4!1s0x548990ccb0093843:0x331095695a741a35!8m2!3d49.1529842!4d-125.9066184?hl=en",
       "drive": {
         "destination": "vancouver",
@@ -269,8 +288,14 @@
       "title": "Vancouver",
       "start": "28/07",
       "end": "30/07",
-      "description": "<p>Slechts weinig steden op aarde liggen op zo’n schitterende plek als Vancouver, de stad die uitkijkt over de Straat van Georgia. De glazen kantoortorens en wolkenkrabbers steken mooi af tegen het Kustgebergte.</p>",
-      "images": [],
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Vancouver\" src=\"./content/vancouver/preview.jpg\"/> <p>Slechts weinig steden op aarde liggen op zo’n schitterende plek als Vancouver, de stad die uitkijkt over de Straat van Georgia. De glazen kantoortorens en wolkenkrabbers steken mooi af tegen het Kustgebergte.</p>",
+      "images": [
+        { "src": "./content/vancouver/river.jpg" },
+        { "src": "./content/vancouver/skyline.jpg" },
+        { "src": "./content/vancouver/mountains.jpg" },
+        { "src": "./content/vancouver/bynight.jpg" },
+        { "src": "./content/vancouver/misty.jpg" }
+      ],
       "maps": "https://www.google.be/maps/place/Vancouver,+BC,+Canada/@49.2578262,-123.2641539,11z/data=!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375?hl=en",
       "hotel": {
         "name": "Comfort Inn Downtown Vancouver",
