@@ -57,11 +57,7 @@ angular.module('TrouwApp.controllers', [])
         var ctrl = this;
 
         ctrl.location = { title: $routeParams['location'] };
-        ctrl.carouselItems = [
-            { src: "http://placehold.it/1000x500&text=slide1" },
-            { src: "http://placehold.it/1000x500&text=slide2" },
-            { src: "http://placehold.it/1000x500&text=slide3" }
-        ];
+        ctrl.carouselItems = [];
 
         function berekenStats() {
             function dateStat(location) {
@@ -128,8 +124,23 @@ angular.module('TrouwApp.controllers', [])
     }])
     .controller('SponsorController', ['$routeParams', 'DataService', function ($routeParams, dataService) {
         var ctrl = this;
+        ctrl.location = ctrl.activity = undefined;
 
-
+        if (angular.isString($routeParams['location']))
+            dataService.getLocation($routeParams['location'])
+                       .then(function (location) {
+                           ctrl.location = location;
+                       });
+        else if (angular.isString($routeParams['activity']))
+            dataService.getActivity($routeParams['activity'])
+                       .then(function (activity) {
+                           ctrl.activity = activity;
+                       });
+        else if (angular.isString($routeParams['flight']))
+            dataService.getFlight($routeParams['flight'])
+                       .then(function (flight) {
+                           ctrl.flight = flight;
+                       });
 
         return ctrl;
     }])

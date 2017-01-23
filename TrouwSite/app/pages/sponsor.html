@@ -1,6 +1,50 @@
-﻿<ol>
-    <li>Zoek op de site een locatie of activiteit die je wilt sponseren.</li>
-    <li>Vul je gepersonaliseerde boodschap in.</li>
-    <li>Print je gift-card met de print knop.</li>
-    <li>Voeg je gift-card bij jou cadeau voor onze trouw.</li>
-</ol>
+﻿<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1 class="text-center"><span class="glyphicon glyphicon-piggy-bank"></span></h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <p><a href back><span class="glyphicon glyphicon-chevron-left"></span>Vorige</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <ul>
+            <li class="row">
+                <h3 class="col-xs-3">Stap 1</h3>
+                <p  class="col-xs-9">Zoek op de site een locatie of activiteit die je wilt sponseren.</p>
+            </li>
+            <li class="row">
+                <h3 class="col-xs-3">Stap 2</h3>
+                <p  class="col-xs-9">Vul je gepersonaliseerde boodschap in.</p>
+            </li>
+            <li class="row">
+                <h3 class="col-xs-3">Stap 3</h3> 
+                <p  class="col-xs-9">Print je gift-card met de print knop.</p>
+            </li>
+            <li class="row">
+                <h3 class="col-xs-3">Stap 4</h3>
+                <p  class="col-xs-9">Voeg je gift-card bij jou cadeau voor onze trouw.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-6" style="border-left: 1px solid #eee">
+        <div ng-if="ctrl.location.id.length > 0">
+            <h3 class="text-center">{{ctrl.location.title}}</h3>
+            <div ng-bind-html="ctrl.location.description" class="onlypreview"></div>
+        </div>
+        <div ng-if="ctrl.activity.id.length > 0">
+            <div class="row activitycard" ng-init="item = ctrl.activity;">
+                <div class="col-xs-4 image" ng-if="item.image.src.length > 0"><img ng-src="{{item.image.src}}" alt="{{item.image.alt}}" /></div>
+                <div class="{{item.image.src.length > 0 ? 'col-xs-8': 'col-xs-12'}} text-center center"><h3 ng-bind-html="item.name"></h3></div>
+            </div>
+        </div>
+        <div ng-if="ctrl.flight.id.length > 0">
+            <h3 class="no-margin" style="margin-bottom: 0.2em;">{{ctrl.flight.title}}</h3>
+            <div ng-bind-html="ctrl.flight.description"></div>
+        </div>
+    </div>
+</div>
