@@ -10,41 +10,70 @@
         <p><a href back><span class="glyphicon glyphicon-chevron-left"></span>Vorige</a></p>
     </div>
 </div>
+<div class="row center">
+    <h2>Stap {{ctrl.index + 1}}</h2>
+</div>
+<div class="divider"></div>
 <div class="row">
-    <div class="col-xs-6">
-        <ul>
-            <li class="row">
-                <h3 class="col-xs-3">Stap 1</h3>
-                <p  class="col-xs-9">Zoek op de site een locatie of activiteit die je wilt sponseren.</p>
-            </li>
-            <li class="row">
-                <h3 class="col-xs-3">Stap 2</h3>
-                <p  class="col-xs-9">Vul je gepersonaliseerde boodschap in.</p>
-            </li>
-            <li class="row">
-                <h3 class="col-xs-3">Stap 3</h3> 
-                <p  class="col-xs-9">Print je gift-card met de print knop.</p>
-            </li>
-            <li class="row">
-                <h3 class="col-xs-3">Stap 4</h3>
-                <p  class="col-xs-9">Voeg je gift-card bij jou cadeau voor onze trouw.</p>
-            </li>
-        </ul>
+    <div class="col-xs-4">
+        <div class="row">
+            <div class="col-xs-12 center">
+                <div ng-if="ctrl.index == 0">
+                    <p>Zoek op de site een vlucht, locatie of activiteit die je wilt sponseren.</p>
+                </div>
+                <div ng-if="ctrl.index == 1">
+                    <p>Vul je gepersonaliseerde boodschap in.</p>
+                </div>
+                <div ng-if="ctrl.index == 2">
+                    <p>Print je gift-card met de print knop.</p>
+                    <div class="center"><button ng-click="ctrl.printDiv('giftcard');">Print!</button></div>
+                    <p>En voeg je ze bij jou cadeau voor onze trouw.</p>
+                </div>
+            </div>
+        </div>   
     </div>
-    <div class="col-xs-6" style="border-left: 1px solid #eee">
-        <div ng-if="ctrl.location.id.length > 0">
-            <h3 class="text-center">{{ctrl.location.title}}</h3>
-            <div ng-bind-html="ctrl.location.description" class="onlypreview"></div>
-        </div>
-        <div ng-if="ctrl.activity.id.length > 0">
-            <div class="row activitycard" ng-init="item = ctrl.activity;">
-                <div class="col-xs-4 image" ng-if="item.image.src.length > 0"><img ng-src="{{item.image.src}}" alt="{{item.image.alt}}" /></div>
-                <div class="{{item.image.src.length > 0 ? 'col-xs-8': 'col-xs-12'}} text-center center"><h3 ng-bind-html="item.name"></h3></div>
+    <div class="col-xs-8" style="padding: 5px; border-left: 1px solid #eee; height: 300px;">
+        <div ng-if="ctrl.index == 0">
+            <div ng-if="ctrl.location.id.length > 0">
+                <h3 class="text-center">{{ctrl.location.title}}</h3>
+                <div ng-bind-html="ctrl.location.description" class="onlypreview"></div>
+            </div>
+            <div ng-if="ctrl.activity.id.length > 0">
+                <div class="row activitycard" ng-init="item = ctrl.activity;">
+                    <div class="col-xs-4 image" ng-if="item.image.src.length > 0"><img ng-src="{{item.image.src}}" alt="{{item.image.alt}}" /></div>
+                    <div class="{{item.image.src.length > 0 ? 'col-xs-8': 'col-xs-12'}} text-center center"><h3 ng-bind-html="item.name"></h3></div>
+                </div>
+            </div>
+            <div ng-if="ctrl.flight.id.length > 0">
+                <h3 class="no-margin" style="margin-bottom: 0.2em;">{{ctrl.flight.title}}</h3>
+                <div ng-bind-html="ctrl.flight.description"></div>
             </div>
         </div>
-        <div ng-if="ctrl.flight.id.length > 0">
-            <h3 class="no-margin" style="margin-bottom: 0.2em;">{{ctrl.flight.title}}</h3>
-            <div ng-bind-html="ctrl.flight.description"></div>
+        <div ng-if="ctrl.index == 1">
+            <form>
+                <fieldset class="row" style="margin-top: 5px;">
+                    <label class="col-xs-3">Naam:</label>
+                    <input class="col-xs-8" type="text" ng-model="ctrl.afzender" ng-change="ctrl.UpdateUrl()" />
+                </fieldset>
+                <fieldset class="row" style="margin-top: 5px;">
+                    <label class="col-xs-3">Titel:</label>
+                    <input class="col-xs-8" type="text" ng-model="ctrl.title" ng-change="ctrl.UpdateUrl()" />
+                </fieldset>
+                <fieldset  class="row" style="margin-top: 5px;">
+                    <label class="col-xs-3">Boodschap:</label>
+                    <textarea class="col-xs-8" ng-model="ctrl.message" ng-change="ctrl.UpdateUrl()" rows="8"></textarea>
+                </fieldset>
+            </form>
+        </div>
+        <div ng-if="ctrl.index == 2">
+            <gift-card id="giftcard" titel="ctrl.title" message="ctrl.message" afzender="ctrl.afzender" url="{{ctrl.url}}"></gift-card>
         </div>
     </div>
 </div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-xs-12 larger">
+        <a href class="pull-left" ng-click="ctrl.vorige()" ng-if="ctrl.index > 0"><span class="glyphicon glyphicon-chevron-left"></span>Stap {{ctrl.index}}</a>
+        <a href class="pull-right" ng-click="ctrl.volgende()" ng-if="ctrl.index < 2">Stap {{ctrl.index + 2}}<span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</div>     

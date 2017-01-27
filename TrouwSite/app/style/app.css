@@ -11,6 +11,10 @@ body {
     margin-top: 1em;
 }
 
+.larger {
+    font-size: 2em;
+}
+
 .container {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
@@ -78,25 +82,26 @@ body {
 }
 
 .giftcard {
-    position: relative;
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 5px;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
+.giftcard .qrcode-wrapper {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.giftcard .qrcode-link {
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
 .giftcard .qrcode {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    border-left: 1px solid #eee;
-    text-align: center;
-}
-
-.giftcard .qrcode img {
-    margin: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 5px 5px 5px 0px;
 }
 
 .activitycard {

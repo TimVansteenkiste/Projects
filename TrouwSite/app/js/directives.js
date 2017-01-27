@@ -34,40 +34,40 @@
            };
        }])
        .directive('carousel', function () {
-          return {
-              restrict: 'E',
-              scope: {
-                  items: '='
-              },
-              link: function (scope, elem, attrs) {
-                  scope.currentIndex = 0;
+           return {
+               restrict: 'E',
+               scope: {
+                   items: '='
+               },
+               link: function (scope, elem, attrs) {
+                   scope.currentIndex = 0;
 
-                  scope.onPrevious = function () {
-                      if (!angular.isArray(scope.items)) return;
-                      --scope.currentIndex;
-                      if (scope.currentIndex < 0) scope.currentIndex = scope.items.length - 1;
-                  };
+                   scope.onPrevious = function () {
+                       if (!angular.isArray(scope.items)) return;
+                       --scope.currentIndex;
+                       if (scope.currentIndex < 0) scope.currentIndex = scope.items.length - 1;
+                   };
 
-                  scope.onNext = function () {
-                      if (!angular.isArray(scope.items)) return;
-                      ++scope.currentIndex;
-                      if (scope.currentIndex >= scope.items.length) scope.currentIndex = 0;
-                  };
-              },
-              template: '<div class="carousel slide">' +
-                  '<div class="carousel-outer">' +
-                    '<div class="carousel-inner">' +
-                        '<div class="item" ng-repeat="item in items" ng-class="{active: $index == currentIndex}">' +
-                            '<img src="{{item.src}}" alt="{{item.alt}}"/>' +
-                        '</div>' +
-                        '<a class="left carousel-control" href ng-click="onPrevious();" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>' +
-                        '<a class="right carousel-control" href ng-click="onNext();" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>' +
-                    '</div>' +
-                  '<ol class="carousel-indicators mCustomScrollbar">' +
-                    '<li ng-repeat="item in items" ng-class="{active: $index == currentIndex}" ng-click="$parent.currentIndex = $index;"><img src="{{item.src}}" alt="{{item.alt}}"/></li>' +
-                  '</ol>' +
-                '</div>'
-          };
+                   scope.onNext = function () {
+                       if (!angular.isArray(scope.items)) return;
+                       ++scope.currentIndex;
+                       if (scope.currentIndex >= scope.items.length) scope.currentIndex = 0;
+                   };
+               },
+               template: '<div class="carousel slide">' +
+                   '<div class="carousel-outer">' +
+                     '<div class="carousel-inner">' +
+                         '<div class="item" ng-repeat="item in items" ng-class="{active: $index == currentIndex}">' +
+                             '<img src="{{item.src}}" alt="{{item.alt}}"/>' +
+                         '</div>' +
+                         '<a class="left carousel-control" href ng-click="onPrevious();" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>' +
+                         '<a class="right carousel-control" href ng-click="onNext();" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>' +
+                     '</div>' +
+                   '<ol class="carousel-indicators mCustomScrollbar">' +
+                     '<li ng-repeat="item in items" ng-class="{active: $index == currentIndex}" ng-click="$parent.currentIndex = $index;"><img src="{{item.src}}" alt="{{item.alt}}"/></li>' +
+                   '</ol>' +
+                 '</div>'
+           };
        })
        .directive('activityCard', ['DataService', function (dataService) {
            return {
@@ -92,5 +92,28 @@
                          '</div>'
            };
        }])
+    .directive('giftCard', function () {
+        return {
+            restrict: 'E',
+            scope: {
+                titel: '=',
+                message: '=',
+                afzender: '=',
+                url: '@'
+            },
+            template: '<div class="giftcard">' +
+                            '<div class="row">' +
+                                '<div class="col-sm-8 col-xs-9" style="padding: 15px !important;">' +
+                                    '<h2 class="col-xs-12 no-margin text-center">{{titel ? titel : \'Geschenk Kaart\'}}</h2>' +
+                                        '<div class="col-xs-12" style="font-size: 1.2em">{{message}}</div>' +
+                                        '<p class="col-xs-12" ng-if="afzender.length > 0">-- <i>{{afzender}}</i></p>' +
+                                '</div>' +
+                                '<div class="col-sm-4 col-xs-3">' +
+                                    '<qrcode data="{{url}}" href="{{url}}" size="300" class="qrcode-wrapper"></qrcode>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+        };
+    })
     ;
 })();
