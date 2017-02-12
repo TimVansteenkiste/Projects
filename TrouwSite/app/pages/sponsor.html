@@ -7,15 +7,15 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <p><a href back><span class="glyphicon glyphicon-chevron-left"></span>Vorige</a></p>
+        <button class="btn btn-link"><span class="glyphicon glyphicon-chevron-left"></span>Terug</button>
     </div>
 </div>
 <div class="row center">
     <h2>Stap {{ctrl.index + 1}}</h2>
 </div>
 <div class="divider"></div>
-<div class="row">
-    <div class="col-xs-4">
+<div class="row" style="margin: 15px; height: 350px;">
+    <div class="col-xs-6">
         <div class="row">
             <div class="col-xs-12 center">
                 <div ng-if="ctrl.index == 0">
@@ -26,13 +26,13 @@
                 </div>
                 <div ng-if="ctrl.index == 2">
                     <p>Print je gift-card met de print knop.</p>
-                    <div class="center"><button ng-click="ctrl.printDiv('giftcard');">Print!</button></div>
+                    <div class="center"><button class="btn btn-primary" ng-click="ctrl.printDiv('giftcard-print');">Print</button></div>
                     <p>En voeg je ze bij jou cadeau voor onze trouw.</p>
                 </div>
             </div>
         </div>   
     </div>
-    <div class="col-xs-8" style="padding: 5px; border-left: 1px solid #eee; height: 300px;">
+    <div class="col-xs-6">
         <div ng-if="ctrl.index == 0">
             <div ng-if="ctrl.location.id.length > 0">
                 <h3 class="text-center">{{ctrl.location.title}}</h3>
@@ -51,29 +51,28 @@
         </div>
         <div ng-if="ctrl.index == 1">
             <form>
-                <fieldset class="row" style="margin-top: 5px;">
-                    <label class="col-xs-3">Naam:</label>
-                    <input class="col-xs-8" type="text" ng-model="ctrl.afzender" ng-change="ctrl.UpdateUrl()" />
-                </fieldset>
-                <fieldset class="row" style="margin-top: 5px;">
-                    <label class="col-xs-3">Titel:</label>
-                    <input class="col-xs-8" type="text" ng-model="ctrl.title" ng-change="ctrl.UpdateUrl()" />
-                </fieldset>
-                <fieldset  class="row" style="margin-top: 5px;">
-                    <label class="col-xs-3">Boodschap:</label>
-                    <textarea class="col-xs-8" ng-model="ctrl.message" ng-change="ctrl.UpdateUrl()" rows="8"></textarea>
-                </fieldset>
+                <div class="form-group row">
+                    <label for="name">Naam:</label>
+                    <input type="text" class="form-control" id="name" ng-model="ctrl.afzender" ng-change="ctrl.UpdateUrl()" ng-model-options='{ debounce: 500 }' />
+                </div>
+                <div class="form-group row">
+                    <label for="message">Boodschap:</label>
+                    <textarea class="form-control" id="message" ng-model="ctrl.message" ng-change="ctrl.UpdateUrl()" ng-model-options='{ debounce: 500 }' rows="8"></textarea>
+                </div>
             </form>
         </div>
         <div ng-if="ctrl.index == 2">
-            <gift-card id="giftcard" titel="ctrl.title" message="ctrl.message" afzender="ctrl.afzender" url="{{ctrl.url}}"></gift-card>
+            <div id="giftcard-print">
+                <gift-card message="ctrl.message" afzender="ctrl.afzender" url="{{ctrl.url}}"></gift-card>
+            </div>
         </div>
     </div>
 </div>
 <div class="divider"></div>
 <div class="row">
-    <div class="col-xs-12 larger">
-        <a href class="pull-left" ng-click="ctrl.vorige()" ng-if="ctrl.index > 0"><span class="glyphicon glyphicon-chevron-left"></span>Stap {{ctrl.index}}</a>
-        <a href class="pull-right" ng-click="ctrl.volgende()" ng-if="ctrl.index < 2">Stap {{ctrl.index + 2}}<span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
-</div>     
+    <h4 class="col-xs-12">
+        <button class="btn btn-link pull-left" ng-click="ctrl.vorige()" ng-if="ctrl.index > 0"><span class="glyphicon glyphicon-chevron-left"></span>Vorige</button>
+        <button class="btn btn-link pull-right" ng-click="ctrl.volgende()" ng-if="ctrl.index < 2">Volgende<span class="glyphicon glyphicon-chevron-right"></span></a>
+    </h4>
+</div>
+<div class="divider"></div>

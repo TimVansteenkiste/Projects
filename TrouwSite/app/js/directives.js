@@ -96,7 +96,6 @@
         return {
             restrict: 'E',
             scope: {
-                titel: '=',
                 message: '=',
                 afzender: '=',
                 url: '@'
@@ -104,7 +103,7 @@
             template: '<div class="giftcard">' +
                             '<div class="row">' +
                                 '<div class="col-sm-8 col-xs-9" style="padding: 15px !important;">' +
-                                    '<h2 class="col-xs-12 no-margin text-center">{{titel ? titel : \'Geschenk Kaart\'}}</h2>' +
+                                    '<h2 class="col-xs-12 no-margin text-center">Geschenk Kaart</h2>' +
                                         '<div class="col-xs-12" style="font-size: 1.2em">{{message}}</div>' +
                                         '<p class="col-xs-12" ng-if="afzender.length > 0">-- <i>{{afzender}}</i></p>' +
                                 '</div>' +
