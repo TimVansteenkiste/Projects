@@ -132,7 +132,7 @@
       "title": "Jasper National Park",
       "start": "17/07",
       "end": "19/07",
-      "description": "<img class=\"col-xs-12 preview\" alt=\"Jasper National Park\" src=\"./content/jasper/preview.jpg\"/> <p>De streek rond Jasper is ronduit adembenemend mooi. De variëteit aan landschappen lijkt oneindig. Het hoogtepunt in deze streek is Maligne Lake, een afgelegen meer te midden van de bergen. Het park is vooral een paradijs voor wandelaars en mountainbikers. Je kunt er ook kajakken en raften.</p>",
+      "description": "<img class=\"col-xs-12 preview\" alt=\"Jasper National Park\" src=\"./content/jasper/preview.jpg\"/> <p>De streek rond Jasper is ronduit adembenemend mooi. De variëteit aan landschappen lijkt oneindig. Het hoogtepunt in deze streek is Maligne Lake, het op een na grootste meer ter wereld dat uit smeltwater van een gletsjer bestaat. Het park is vooral een paradijs voor wandelaars en mountainbikers. Je kunt er ook kajakken en raften.</p>",
       "images": [
         { "src": "./content/jasper/lakeview.jpg" },
         { "src": "./content/jasper/river.jpg" },
@@ -311,7 +311,7 @@
       "id": "HeliTour",
       "locationId": "kananaskis",
       "name": "Kananaskis Heli - First Nations Heritage Tour",
-      "description": "",
+      "description": "Met een helikopter vliegen we over het natuurgebied.",
       "image": {
         "src": "./content/kananaskis/helitour.jpg",
         "alt": "Kananaskis Heli Tour"
@@ -322,7 +322,7 @@
       "id": "CanoeTour",
       "locationId": "banff",
       "name": "Banff Adventures Canoe Tour",
-      "description": "",
+      "description": "Een kanotocht op één van de vele mooie meren van Canada.",
       "image": {
         "src": "./content/banff/canoe.jpg",
         "alt": "Canoe Tour"
@@ -333,7 +333,7 @@
       "id": "GondolaTour",
       "locationId": "banff",
       "name": "Gondola & Cruise Tour",
-      "description": "Een kabelbaan breng je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
+      "description": "Een kabelbaan brengt je in 8 minuten naar de top van Sulphur Mountain (2270 m). Een pad leidt je vanaf daar in een kwartiertje naar een voormalig weerstation met een gereconstrueerd interieur uit 1930. Grandioos uitzicht op Banff, Lake Minnewanka en Bow River.",
       "image": {
         "src": "./content/banff/gondola.jpg",
         "alt": "Gondola"
@@ -344,7 +344,7 @@
       "id": "SpiritIslandCruise",
       "locationId": "jasper",
       "name": "Spirit Island Cruise on Maligne Lake",
-      "description": "",
+      "description": "Een anderhalf uur durende boottocht voert je langs de bergen met hun gletsjers naar Spirit Island, een klein eilandje midden in het meer. Het uitzicht op dit eiland is een van de meest beroemde uitzichten van de Canadese Rocky Mountains.",
       "image": {
         "src": "./content/jasper/SpiritIslandCruise.jpg",
         "alt": "Spirit Island Cruise"
@@ -355,7 +355,7 @@
       "id": "WhiteWaterRafting",
       "locationId": "jasper",
       "name": "White Water Rafting",
-      "description": "",
+      "description": "Raften op de stroomversnellingen van de Athabasca River.",
       "image": {
         "src": "./content/jasper/WhiteWaterRafting.jpg",
         "alt": "White Water Rafting"
@@ -366,7 +366,7 @@
       "id": "IceExplorer",
       "locationId": "jasper",
       "name": "Ice Explorer Ride & Skywalk",
-      "description": "<p>Met de \"Ice Explorer\", een aangepast 4x4 voertuig, over de Athabasca gletsjer trekken die zich over 6km uitstrekt. Verder de gletjer vanop 280m hoogte bewonderen vanop de gelazen skywalk die een uitzicht bied over Sunwata Canyon.</p>",
+      "description": "Met de \"Ice Explorer\", een aangepast 4x4 voertuig, over de Athabasca gletsjer trekken die zich over 6km uitstrekt. Verder de gletjer vanop 280m hoogte bewonderen vanop de gelazen skywalk die een uitzicht bied over Sunwata Canyon.",
       "image": {
         "src": "./content/jasper/IceExplorer.jpg",
         "alt": "Ice Explorer Ride"
@@ -381,14 +381,14 @@
         "src": "./content/clearwater/rafting.jpg" ,
         "alt": "Interior Whitewater Rafting"
       },
-      "description": "",
+      "description": "Raften op de stroomversnellingen van de Clearwater River.",
       "price": 0.00
     },
     {
       "id": "TsawwassenFerry",
       "locationId": "harrison",
       "name": "<i class=\"fa fa-ship\"></i> Tsawwassen to Swartz Bay Ferry",
-      "description": "",
+      "description": "Deze ferry brengt ons van het Canadese vaste land tot op Victoria Island.",
       "image": {
         "src": "./content/harrison/ferry.jpg",
         "alt": "Ferry from Tsawwassen to Swartz Bay"
@@ -399,7 +399,7 @@
       "id": "WhaleSafari",
       "locationId": "tofino",
       "name": "<i class=\"fa fa-paw\"></i> Whale & Bear Watching Safari",
-      "description": "",
+      "description": "De Inside Passage is een ideale locatie voor het spotten van walvissen en beren.",
       "image": {
         "src": "./content/tofino/safari.jpg",
         "alt": "Whale & Bear Safari"
@@ -410,7 +410,7 @@
       "id": "HorseshoeFerry",
       "locationId": "tofino",
       "name": "<i class=\"fa fa-ship\"></i> Namaimo to Horseshoe Bay Ferry",
-      "description": "",
+      "description": "Deze ferry brengt ons van Victoria Island terug naar het vaste land.",
       "image": {
         "src": "./content/tofino/ferry.jpg",
         "alt": "Ferry from Namaimo to Horseshoe Bay"

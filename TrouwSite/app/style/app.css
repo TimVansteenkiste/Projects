@@ -3,6 +3,10 @@ body {
   min-width: 500px;
 }
 
+p {
+    text-align: justify;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -24,7 +28,7 @@ body {
 }
 
 .content {
-    padding-bottom: 30px;
+    padding-bottom: 3.5em;
 }
 
 .footer {
@@ -39,6 +43,14 @@ body {
 
 .divider {
     border-bottom: 1px solid #eee;
+}
+
+.divider-vertical {
+    width: 0px;
+    border-left: 1px solid #eee;
+    position: absolute;
+    left: 50%;
+    height: 100%;
 }
 
 .center {
@@ -56,7 +68,6 @@ body {
     left: 0;
     min-width: 100%;
     max-width: 105%;
-    min-height: 100%;
 }
 
 .preview {
@@ -81,10 +92,25 @@ body {
     visibility: visible;
 }
 
+.sponsor {
+    margin: 15px;
+    position: relative;
+}
+
+.sponsor form {
+    margin-left: 15px;
+}
+
 .giftcard {
+    display: block;
     background-color: #fff;
+    opacity: 100;
     border: 1px solid #eee;
     border-radius: 5px;
+}
+
+.giftcard > div {
+    padding: 15px;
 }
 
 .giftcard .qrcode-wrapper {
@@ -111,6 +137,10 @@ body {
     border-radius: 5px;
 }
 
+#activiteiten .activitycard h3 {
+    margin-top: -0.6em;
+}
+
 .activitycard .image {
     padding: 0em;
 }
@@ -132,6 +162,17 @@ body {
     margin-right: 15px;
 }
 
-.x2{
-	transform: scale(2,2);
+.no-border {
+    border: 0px !important;
+}
+
+.print-border {
+    border: 1px dashed #eee;
+    border-radius: 0px;
+}
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
 }

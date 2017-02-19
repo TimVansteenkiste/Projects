@@ -7,38 +7,43 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-link"><span class="glyphicon glyphicon-chevron-left"></span>Terug</button>
+        <button class="btn btn-link" back><span class="glyphicon glyphicon-chevron-left"></span>Terug</button>
     </div>
 </div>
 <div class="row center">
     <h2>Stap {{ctrl.index + 1}}</h2>
 </div>
 <div class="divider"></div>
-<div class="row" style="margin: 15px; height: 350px;">
+<div class="row sponsor">
     <div class="col-xs-6">
         <div class="row">
             <div class="col-xs-12 center">
                 <div ng-if="ctrl.index == 0">
-                    <p>Zoek op de site een vlucht, locatie of activiteit die je wilt sponseren.</p>
+                    <p>Zoek met behulp van de <a href="#!/home#timeline">tijdslijn</a> een vlucht, locatie of activiteit dat je wilt sponsoren.</p>
+                    <p class="small"><i>Druk 'Volgende' om naar de volgende stap te gaan.</i></p>
                 </div>
                 <div ng-if="ctrl.index == 1">
-                    <p>Vul je gepersonaliseerde boodschap in.</p>
+                    <p>Vul je naam en gepersonaliseerde boodschap in.</p>
+                    <p>Je naam en je boodschap komen onderaan het kaartje en zullen wij te zien krijgen als we jou QR-code inscannen!</p>
+                    <p class="small"><i>Soms verschijnt er in stap 3 geen QR-Code, je kan dan spaties toevoegen aan het einde van je bericht tot deze wel verschijnt.</i></p>
                 </div>
                 <div ng-if="ctrl.index == 2">
-                    <p>Print je gift-card met de print knop.</p>
-                    <div class="center"><button class="btn btn-primary" ng-click="ctrl.printDiv('giftcard-print');">Print</button></div>
-                    <p>En voeg je ze bij jou cadeau voor onze trouw.</p>
+                    <p>Print je gepersonaliseerde kaartje met de print knop en voeg je ze bij jou cadeau voor onze trouw. Alvast bedankt!</p>
+                    <p class="center"><button class="btn btn-primary" ng-click="ctrl.print(ctrl.url);">Print</button></p>
+                    <p class="small"><i>Indien het printen niet werkt in jou browser, kan je via de link op de QR-code naar een print-vriendelijkere pagina gaan.</i></p>
                 </div>
             </div>
         </div>   
     </div>
+    <div class="divider-vertical"></div>
     <div class="col-xs-6">
         <div ng-if="ctrl.index == 0">
-            <div ng-if="ctrl.location.id.length > 0">
+            <div ng-if="ctrl.location.id.length > 0" >
                 <h3 class="text-center">{{ctrl.location.title}}</h3>
                 <div ng-bind-html="ctrl.location.description" class="onlypreview"></div>
+                <a href="#!/location/{{ctrl.location.id}}">Lees meer...</a>
             </div>
-            <div ng-if="ctrl.activity.id.length > 0">
+            <div ng-if="ctrl.activity.id.length > 0" >
                 <div class="row activitycard" ng-init="item = ctrl.activity;">
                     <div class="col-xs-4 image" ng-if="item.image.src.length > 0"><img ng-src="{{item.image.src}}" alt="{{item.image.alt}}" /></div>
                     <div class="{{item.image.src.length > 0 ? 'col-xs-8': 'col-xs-12'}} text-center center"><h3 ng-bind-html="item.name"></h3></div>
@@ -52,19 +57,20 @@
         <div ng-if="ctrl.index == 1">
             <form>
                 <div class="form-group row">
-                    <label for="name">Naam:</label>
+                    <label for="name">Naam<span style="color:red">*</span>:</label>
                     <input type="text" class="form-control" id="name" ng-model="ctrl.afzender" ng-change="ctrl.UpdateUrl()" ng-model-options='{ debounce: 500 }' />
                 </div>
                 <div class="form-group row">
-                    <label for="message">Boodschap:</label>
-                    <textarea class="form-control" id="message" ng-model="ctrl.message" ng-change="ctrl.UpdateUrl()" ng-model-options='{ debounce: 500 }' rows="8"></textarea>
+                    <label for="message">Boodschap<span style="color:red">*</span>:</label>
+                    <textarea class="form-control" id="message" ng-model="ctrl.message" ng-change="ctrl.UpdateUrl()" ng-model-options='{ debounce: 500 }' rows="5" maxlength="2000"></textarea>
+                </div>
+                <div class="row">
+                    <p class="small" style="color:red"><i>* Verplicht veld. Vul deze in alvorens verder te kunnen gaan.</i></p>
                 </div>
             </form>
         </div>
         <div ng-if="ctrl.index == 2">
-            <div id="giftcard-print">
-                <gift-card message="ctrl.message" afzender="ctrl.afzender" url="{{ctrl.url}}"></gift-card>
-            </div>
+            <gift-card id="giftcard-print" message="ctrl.message" afzender="ctrl.afzender" url="{{ctrl.url}}"></gift-card>
         </div>
     </div>
 </div>
@@ -72,7 +78,6 @@
 <div class="row">
     <h4 class="col-xs-12">
         <button class="btn btn-link pull-left" ng-click="ctrl.vorige()" ng-if="ctrl.index > 0"><span class="glyphicon glyphicon-chevron-left"></span>Vorige</button>
-        <button class="btn btn-link pull-right" ng-click="ctrl.volgende()" ng-if="ctrl.index < 2">Volgende<span class="glyphicon glyphicon-chevron-right"></span></a>
+        <button class="btn btn-link pull-right" ng-click="ctrl.volgende()" ng-if="ctrl.index < 2" ng-disabled="ctrl.index == 1 && (!ctrl.message.length > 0 || !ctrl.afzender.length > 0)">Volgende<span class="glyphicon glyphicon-chevron-right"></span></button>
     </h4>
 </div>
-<div class="divider"></div>

@@ -101,17 +101,64 @@
                 url: '@'
             },
             template: '<div class="giftcard">' +
-                            '<div class="row">' +
-                                '<div class="col-sm-8 col-xs-9" style="padding: 15px !important;">' +
-                                    '<h2 class="col-xs-12 no-margin text-center">Geschenk Kaart</h2>' +
-                                        '<div class="col-xs-12" style="font-size: 1.2em">{{message}}</div>' +
-                                        '<p class="col-xs-12" ng-if="afzender.length > 0">-- <i>{{afzender}}</i></p>' +
-                                '</div>' +
-                                '<div class="col-sm-4 col-xs-3">' +
-                                    '<qrcode data="{{url}}" href="{{url}}" size="300" class="qrcode-wrapper"></qrcode>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>'
+                            '<div class="row"><div class="col-xs-12">' +
+                                    '<h2 class="col-xs-12 no-margin text-center"><span class="glyphicon glyphicon-gift"></span></h2>' +
+                            '</div></div>' +
+                            '<div class="row"><div class="col-xs-6 col-xs-offset-3">' +
+                                    '<qrcode version="{{version}}" error-correction-level="L" data="{{url}}" href="{{url}}" size="850" class="qrcode-wrapper"></qrcode>' +
+                            '</div></div>' +
+                            '<div class="row"><div class="col-xs-12">' +
+                                    '<div class="col-xs-12 center" style="font-size: 1.2em; word-break: break-word">{{message}}</div>' +
+                                    '<p class="col-xs-12 center" ng-if="afzender.length > 0">-- <i>{{afzender}}</i></p>' +
+                            '</div></div>' +
+                        '</div>',
+            link: function (scope) {
+                scope.$watch('url', function () {
+                    var count = scope.url.length*2;
+                    var version = 1;
+                    if (count > 25)++version;
+                    if (count > 47)++version;
+                    if (count > 77)++version;
+                    if (count > 114)++version;
+                    if (count > 154)++version;
+                    if (count > 195)++version;
+                    if (count > 224)++version;
+                    if (count > 279)++version;
+                    if (count > 335)++version;
+                    if (count > 395)++version;
+                    if (count > 468)++version;
+                    if (count > 535)++version;
+                    if (count > 619)++version;
+                    if (count > 667)++version;
+                    if (count > 758)++version;
+                    if (count > 854)++version;
+                    if (count > 938)++version;
+                    if (count > 1046)++version;
+                    if (count > 1153)++version;
+                    if (count > 1249)++version;
+                    if (count > 1352)++version;
+                    if (count > 1460)++version;
+                    if (count > 1588)++version;
+                    if (count > 1704)++version;
+                    if (count > 1853)++version;
+                    if (count > 1990)++version;
+                    if (count > 2132)++version;
+                    if (count > 2223)++version;
+                    if (count > 2369)++version;
+                    if (count > 2520)++version;
+                    if (count > 2677)++version;
+                    if (count > 2840)++version;
+                    if (count > 3009)++version;
+                    if (count > 3183)++version;
+                    if (count > 3351)++version;
+                    if (count > 3537)++version;
+                    if (count > 3729)++version;
+                    if (count > 3927)++version;
+                    if (count > 4087)++version;
+                    if (count > 4296)++version;
+                    scope.version = version;
+                });
+            }
         };
     })
     ;

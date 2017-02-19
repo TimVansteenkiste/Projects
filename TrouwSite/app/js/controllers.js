@@ -92,7 +92,7 @@ angular.module('TrouwApp.controllers', [])
             }
             function sponsorStat(location) {
                 if (angular.isUndefined(location) || angular.isUndefined(location.id)) return;
-                return '<a href="#!/sponsor?location=' + location.id + '">Sponser!</a>';
+                return '<a href="#!/sponsor?location=' + location.id + '">Sponsoren!</a>';
             }
             ctrl.stats = [
                 { title: "Verblijf duur", key: '<span class="glyphicon glyphicon-calendar"></span>', value: dateStat(ctrl.location) },
@@ -143,45 +143,41 @@ angular.module('TrouwApp.controllers', [])
                            ctrl.flight = flight;
                        });
 
-        ctrl.printDiv = function (divName) {
-            var div = document.getElementById(divName);
-            html2canvas([div], {
-                onrendered: function (canvas) {
-                    var scale = 4;
-                    var extra_canvas = document.createElement('canvas');
-                    extra_canvas.setAttribute('width', canvas.width * scale);
-                    extra_canvas.setAttribute('height', canvas.height * scale);
-                    var ctx = extra_canvas.getContext('2d');
-                    ctx.webkitImageSmoothingEnabled = false;
-                    ctx.mozImageSmoothingEnabled = false;
-                    ctx.imageSmoothingEnabled = false;
-                    ctx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, canvas.width * scale, canvas.height * scale);
-                    //var context = canvas.getContext('2d');
-                    var src = extra_canvas.toDataURL('image/png');
-                    var content = '<html><head><link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" /></head><body onload="window.print(); window.close();" class="container"><div class="row"><image class="col-xs-12" src="' + src + '" /></div></body></html>';
-                    
-                    if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-                        var popupWin = window.open('', '_blank', 'width=2480,height=3508,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
-                        popupWin.window.focus();
-                        popupWin.document.write('<!DOCTYPE html>' + content);
-                        popupWin.onbeforeunload = function (event) {
-                            popupWin.close();
-                            return '.\n';
-                        };
-                        popupWin.onabort = function (event) {
-                            popupWin.document.close();
-                            popupWin.close();
-                        }
-                        popupWin.document.close();
-                    }
-                    else {
-                        var popupWin = window.open('', '_blank', 'width=2480,height=3508');
-                        popupWin.document.open();
-                        popupWin.document.write(content);
-                        popupWin.document.close();
-                    }
-                }
-            });
+        ctrl.print = function (url) {
+            function removeElementById(id) {
+                var element = printWindow.document.getElementById(id);
+                if (element && element != null) element.outerHTML = '';
+            }
+            function addClass(className, extraClassName) {
+                var elements = printWindow.document.getElementsByClassName(className);
+                angular.forEach(elements, function (value) {
+                    if (value == null) return;
+                    $(value).addClass(extraClassName);
+                });
+            }
+            function removeElementByClass(className) {
+                var elements = printWindow.document.getElementsByClassName(className);
+                angular.forEach(elements, function (value) {
+                    if (value == null) return;
+                    value.outerHTML = '';
+                });
+            }
+            var printWindow = window.open(url, '_blank', 'width=595,height=842,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
+            printWindow.addEventListener('load', function () 
+            {
+                window.setTimeout(function () {
+                    removeElementById('footer');
+                    removeElementById('bg');
+                    removeElementByClass('page-header');
+                    addClass('container', 'no-border');
+                    addClass('giftcard', 'print-border');
+                    removeElementByClass('glyphicon-gift');
+                    printWindow.print();
+                    window.setTimeout(function () {
+                        printWindow.close();
+                    }, 100);
+                }, 100);
+            }, true);
         }
         
         ctrl.UpdateUrl = function () {
@@ -194,14 +190,12 @@ angular.module('TrouwApp.controllers', [])
             if (angular.isString($routeParams['flight']))
                 items.push('flight=' + $routeParams['flight']);
             if (angular.isString(ctrl.afzender))
-                items.push('a=' + ctrl.afzender);
+                items.push('a=' + encodeURIComponent(ctrl.afzender));
             if (angular.isString(ctrl.message))
-                items.push('m=' + ctrl.message);
+                items.push('m=' + encodeURIComponent(ctrl.message));
 
             if (items.length > 0)
                 ctrl.url += '?' + items.join('&');
-
-            ctrl.url = encodeURI(ctrl.url);
         }
         ctrl.UpdateUrl();
 
